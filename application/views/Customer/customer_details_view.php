@@ -31,7 +31,7 @@
           <button class="list-group-item list-group-item-action" type="button" data-toggle="dropdown">Settings
           <span class="caret"></span></button>
           <ul class="dropdown-menu">
-                  <a href="<?php echo base_url('CustomerController/settings')?>" 
+                  <a href="<?php echo base_url('CustomerController/profile')?>"
                   class="list-group-item list-group-item-action">Profile</a>
                   <a href="<?php echo base_url('CustomerController/logout')?>" 
                   class="list-group-item list-group-item-action">Logout</a>

@@ -61,6 +61,16 @@
 			$this->load->view('header/footer_view');
 		}
 
+		public function profile()
+		{
+			$data['cater'] = $this->CateringModel->get_catering();
+			$data['customer'] = $this->CustomerModel->get_client2();
+			$data['book'] = $this->BookingModel->get_booking();
+			$this->load->view('header/header_view');
+			$this->load->view('Customer/customer_profile_view', $data);
+			$this->load->view('header/footer_view');
+		}
+
 		public function add_register()
 		{
 			$name = $this->input->post('name');
