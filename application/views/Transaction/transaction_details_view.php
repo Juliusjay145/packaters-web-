@@ -229,19 +229,22 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('ServiceController/service')?>"><i class="fa fa-desktop"></i> Services</a>
                     </li>
 					<li>
-                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction</a>
+                        <a class="active-menu" href="chart.html"><i class="fa fa-bar-chart-o active"></i> Transaction</a>
                     </li>
 
 
                     <li>
                         <a href="#"><i class="fa fa-sitemap"></i> Category<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="<?php echo base_url('CategoryController/category')?>">Add Menu</a>
+                            </li>
                             <li>
                                 <a href="#">List of Menu</a>
                             </li>
@@ -260,13 +263,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            Dashboard <small>Summary of your App</small>
+                            Transaction <small>Summary of your App</small>
                         </h1>
-						<ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Library</a></li>
-                            <li class="active">Data</li>
-                        </ol>
                     </div>
                 </div>
 				
@@ -274,55 +272,42 @@
                 <!-- /. ROW  -->
 
                 <div class="row">
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-green green">
-                            <div class="panel-left pull-left green">
-                                <i class="fa fa-bar-chart-o fa-5x"></i>
-                                
-                            </div>
-                            <div class="panel-right pull-right">
-								<h3><?php echo $catering; ?></h3>
-                               <strong> Service</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-blue blue">
-                              <div class="panel-left pull-left blue">
-                                <i class="fa fa-shopping-cart fa-5x"></i>
-								</div>
-                                
-                            <div class="panel-right pull-right">
-							<h3>0</h3>
-                               <strong> Completed Transaction</strong>
+                    <table class="table table-striped custab">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Package Service</th>
+                                <th>Price</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                        </thead>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-red red">
-                            <div class="panel-left pull-left red">
-                                <i class="fa fa fa-comments fa-5x"></i>
-                               
-                            </div>
-                            <div class="panel-right pull-right">
-							 <h3>0</h3>
-                               <strong> Confirmed Request </strong>
+                            <?php foreach($cater as $c): ?>
+                            <?php foreach($customer as $customers): ?>
+                            <?php foreach($book as $b): ?>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-brown brown">
-                            <div class="panel-left pull-left brown">
-                                <i class="fa fa-users fa-5x"></i>
-                                
-                            </div>
-                            <div class="panel-right pull-right">
-							<h3>0</h3>
-                             <strong>Canceled Transaction</strong>
+                                <?php  
+                                    
+                                        if($c['id'] == $b['pack_caterer_id']):
 
-                            </div>
+                                            if($c['username'] == $this->session->userdata('username')):
+                                    
+                                    ?> 
+
+                                <tr>
+                                    <td><?php echo $b['customer_fname']?></td>
+                                    <td><?php echo $b['pack_address']?></td>
+                                    <td><?php echo $b['package_name']?></td>
+                                    <td><?php echo $b['price']?></td>
+                                    <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                                </tr>
+                            <?php endif; ?>
+                            <?php endif; ?>
+                            <?php endforeach; ?>
+                            <?php endforeach; ?>
+                            <?php endforeach; ?>
+                        </table>
                         </div>
                     </div>
                 </div>

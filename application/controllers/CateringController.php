@@ -9,7 +9,8 @@
 			parent::__construct();
 			$this->load->model('CateringModel');						
 			$this->load->model('ServiceModel');						
-		
+			$this->load->model('BookingModel');
+			$this->load->model('CustomerModel');
 		}
 
 		public function index()
@@ -26,6 +27,18 @@
 			$this->load->view('Catering/catering_home_view', $data);
 			$this->load->view('headerV2/footer_view');
 		}
+
+		public function transaction()
+		{
+			$data['cater'] = $this->CateringModel->get_catering();
+			$data['customer'] = $this->CustomerModel->get_client2();
+			$data['book'] = $this->BookingModel->get_booking();
+			$data['catering'] = $this->ServiceModel->count_catering_service();
+			$this->load->view('headerV2/header_view');
+			$this->load->view('Transaction/transaction_details_view', $data);
+			$this->load->view('headerV2/footer_view');
+		}
+
 
 
 		public function register()
