@@ -8,13 +8,21 @@
 		{
 			parent::__construct();
 			$this->load->model('CustomerModel');			
-		
+			$this->load->model('CateringModel');
+			$this->load->model('BookingModel');			
 		}
 
 		public function register()
 		{
 			$this->load->view('header/header_view');
 			$this->load->view('Customer/customer_register_view');
+			$this->load->view('header/footer_view');
+		}
+
+		public function landing()
+		{
+			$this->load->view('header/header_view');
+			$this->load->view('LandingPage/landing_view');
 			$this->load->view('header/footer_view');
 		}
 
@@ -29,8 +37,27 @@
 
 		public function home()
 		{
+			$data['cater'] = $this->CateringModel->get_catering();
+			$data['customer'] = $this->CustomerModel->get_client2();
 			$this->load->view('header/header_view');
-			$this->load->view('Customer/customer_home_view');
+			$this->load->view('Customer/customer_home_view', $data);
+			$this->load->view('header/footer_view');
+		}
+
+		public function settings()
+		{
+			$this->load->view('header/header_view');
+			$this->load->view('Customer/customer_settings_view');
+			$this->load->view('header/footer_view');
+		}
+
+		public function details()
+		{
+			$data['cater'] = $this->CateringModel->get_catering();
+			$data['customer'] = $this->CustomerModel->get_client2();
+			$data['book'] = $this->BookingModel->get_booking();
+			$this->load->view('header/header_view');
+			$this->load->view('Customer/customer_details_view', $data);
 			$this->load->view('header/footer_view');
 		}
 
@@ -95,6 +122,17 @@
 	        }        
 		}
 
+
+
+
+
+
+
+		public function logout()
+		{
+			$this->session->unset_userdata('username');
+			redirect(base_url('CustomerController/landing'));
+		}
 
 		public function _displayAlert($message,$cont){
       		echo "<script>alert('$message');window.location='".base_url()."$cont';</script>";

@@ -71,7 +71,7 @@
                     <li>
                         <a href="ui-elements.html" class="active-menu"><i class="fa fa-desktop"></i> Service</a>
                     </li>
-					<li>
+                    <li>
                         <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Transaction</a>
                     </li>
                     <li>
@@ -93,7 +93,7 @@
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
-			 <div class="row">
+             <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
                             Add Service<small></small>
@@ -170,8 +170,8 @@
                                             <tr class="odd gradeX">
                                                 <td><?php echo $s['service_name']?></td>
                                                 <td class="center">
-                                                <a href="<?php echo base_url('CategoryController/category')?>"><i class="fa fa-pencil fa-fw"></i> |</a>
-                                                    <a href="url"><i class="fa fa-minus-square fa-fw"></i></a>
+                                                <a href="<?php echo base_url('CategoryController/category')?>/<?php echo $s['id']?>"><i class="fa fa-pencil fa-fw"></i> |</a>
+                                                    <a href="<?php echo base_url('ServiceController/delete_service')?>/<?php echo $s['id']?>"><i class="fa fa-minus-square fa-fw"></i></a>
                                                 </td>
                                             </tr>
                                         <?php endif; ?>   
@@ -198,7 +198,7 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-			</div>
+            </div>
              <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->

@@ -11,6 +11,7 @@
  <script src="<?php echo base_url('../bootstrap/contact/jqBootstrapValidation.js')?>"></script>
  <script src="<?php echo base_url('../bootstrap/contact/contact_me.js')?>"></script>
   <script src="<?php echo base_url('../bootstrap/js/main.js')?>"></script>
+  <script src="<?php echo base_url('../bootstrap/js/sample.js')?>"></script>
 
 
 

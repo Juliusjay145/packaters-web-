@@ -62,7 +62,7 @@
                     <li>
                         <a href="ui-elements.html"><i class="fa fa-desktop"></i> Service</a>
                     </li>
-					<li>
+                    <li>
                         <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Transaction</a>
                     </li>
                     <li>
@@ -84,7 +84,7 @@
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
-			 <div class="row">
+             <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
                             Add Menu<small></small>
@@ -101,20 +101,22 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form action="<?php echo base_url('ServiceController/add_service')?>" method="post">
+                                    <form action="<?php echo base_url('CategoryController/add_category')?>" method="post">
+                                    <input type="hidden" name="service_id" class="form-control" value="<?php echo $getpest[0]['id']; ?>">
                                         <div class="form-group">
                                             <label>Menu Name</label>
-                                            <input class="form-control" name="service_name" placeholder="Enter text">
+                                            <input class="form-control" name="name" placeholder="Enter text">
                                         </div>
                                         <div class="form-group">
                                             <label>File input</label>
-                                            <input type="file" name="logo">
+                                            <input type="file" name="menu_logo">
                                         </div>
+                                        
                                         <div class="form-group">
-                                            <label>Service Price</label>
-                                            <input type="number" class="form-control" name="service_price">
+                                            <label>Menu Description</label>
+                                            <textarea class="form-control" name="menu_description" rows="3"></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Add</button>
+                                        <button type="submit" class="btn btn-primary">Add Menu</button>
                                     </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
@@ -134,7 +136,7 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-			</div>
+            </div>
              <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->

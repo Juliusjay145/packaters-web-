@@ -60,6 +60,25 @@
 
                           $this->ServiceModel->insert($add);
         }
+
+        public function delete_service()
+        {
+
+            $id = $this->uri->segment(3);
+
+            $data = array(
+
+                'soft_delete' => 0
+
+            );
+
+            $this->ServiceModel->delete($data, $id);
+            $this->_displayAlert('Service Delete','ServiceController/service', $data);
+        }
+
+        public function _displayAlert($message,$cont){
+            echo "<script>alert('$message');window.location='".base_url()."$cont';</script>";
+        }
     }
 
 
