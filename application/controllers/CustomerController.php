@@ -9,7 +9,8 @@
 			parent::__construct();
 			$this->load->model('CustomerModel');			
 			$this->load->model('CateringModel');
-			$this->load->model('BookingModel');			
+			$this->load->model('BookingModel');
+			$this->load->model('ServiceModel');						
 		}
 
 		public function register()
@@ -26,6 +27,16 @@
 			$this->load->view('header/footer_view');
 		}
 
+		public function catering_profile($id)
+		{
+			$data['cater'] = $this->CateringModel->get_caterer_profile($id);
+			$data['customer'] = $this->CustomerModel->get_client2();
+			$data['service'] = $this->ServiceModel->get_service();
+			$data['book'] = $this->BookingModel->get_booking();
+			$this->load->view('header/header_view');
+			$this->load->view('CateringProfile/catering_profile_view', $data);
+			$this->load->view('header/footer_view');
+		}
 
 		public function login_view()
 		{

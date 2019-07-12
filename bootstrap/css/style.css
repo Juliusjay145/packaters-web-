@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #07cc91;
+  background: #AE242B;
   color: #fff;
   padding: 6px 12px 9px 12px;
   font-size: 16px;
@@ -82,11 +82,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #topbar .contact-info a:hover {
-  color: #596bf3;
+  color: #AE242B;
 }
 
 #topbar .contact-info i {
-  color: #596bf3;
+  color: #AE242B;
   padding: 4px 4px 0 0;
 }
 .contact-info.float-left {
@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #topbar .social-links a {
-  color: #596bf3;
+  color: #AE242B;
   padding: 4px 12px;
   display: inline-block;
   line-height: 1px;
@@ -140,11 +140,11 @@ h1, h2, h3, h4, h5, h6 {
 #header #logo h1 a {
   line-height: 1;
   display: inline-block;
-  color: #07cc91;
+  color: #AE242B;
 }
 
 #header #logo h1 a span {
-  color: #071e33;
+  color: #AE242B;
 }
 
 #header #logo img {
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 0;
 }
 .is-sticky header .nav-menu a{
-	color:#596bf3;
+	color:#AE242B;
 }
 @media (max-width: 768px) {
   #header {
@@ -235,24 +235,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .hero-content .btn-banner {
-  background: #07cc91;
-  border: 2px solid #07cc91;
+  background: #AE242B;
+  border: 2px solid #AE242B;
   border-radius: 30px;
 }
 
 #hero .hero-content .btn-banner:hover {
   background: none;
-  color: #07cc91;
+  color: #AE242B;
 }
 
 #hero .hero-content .btn-projects {
-  background: #596bf3;
-  border: 2px solid #596bf3;
+  background: #AE242B;
+  border: 2px solid #AE242B;
 }
 
 #hero .hero-content .btn-projects:hover {
   background: none;
-  color: #596bf3;
+  color: #AE242B;
 }
 
 #hero #hero-carousel {
@@ -394,7 +394,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul li:hover > a {
-  color: #596bf3;
+  color: #AE242B;
 }
 
 .nav-menu ul ul {
@@ -418,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav-toggle i {
-  color: #07cc91;
+  color: #AE242B;
 }
 
 @media (max-width: 768px) {
@@ -438,7 +438,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 260px;
   overflow-y: auto;
   transition: 0.4s;
-  background: #596bf3;
+  background: #AE242B;
 }
 
 #mobile-nav ul {
@@ -464,7 +464,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul li a:hover {
-  color: #07cc91;
+  color: #AE242B;
 }
 
 #mobile-nav ul li li {
@@ -481,11 +481,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #596bf3;
+  color: #AE242B;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #07cc91;
+  color: #AE242B;
 }
 
 #mobile-body-overly {
@@ -517,7 +517,7 @@ Inner Banner
 #innerBanner{
 	padding: 138px 0 64px;
 	text-align:center;
-	background: #596bf3;
+	background: #AE242B;
 	background: linear-gradient(45deg, #5565df -55%, #3d4ece 100%);
 }
 #innerBanner h2{
@@ -567,7 +567,7 @@ Inner Banner
   height: 3px;
   bottom: 0;
   left: 0;
-  border-top: #596bf3 solid 2px;
+  border-top: #AE242B solid 2px;
   right: 0;
   text-align: center;
   margin: 0 auto;
@@ -680,7 +680,7 @@ Inner Banner
 }
 
 #services .box .icon i:before {
-  background: #07cc91;
+  background: #AE242B;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -892,7 +892,7 @@ opacity:1;
   margin: 0 auto 15px auto;
   background: #ffffff;
   width: 100%;
-  border: 1px solid #07cc91;
+  border: 1px solid #AE242B;
   border-radius: 15px 15px 0 15px;
   padding: 22px 15px;
   font-size: 15px;
@@ -914,7 +914,7 @@ opacity:1;
 }
 
 #testimonials .owl-dot.active {
-  background-color: #07cc91;
+  background-color: #AE242B;
 }
 .map{
 	
@@ -1027,9 +1027,9 @@ p.help-block li {
 }
 
 #team .member .social a {
-  color: #07cc91;
+  color: #AE242B;
   margin: 2px 6px;
-  border: 1px solid #07cc91;
+  border: 1px solid #AE242B;
   width: 42px;
   display: inline-block;
   /* opacity: .4; */
@@ -1061,7 +1061,7 @@ p.help-block li {
   font-size: 24px;
   display: inline-block;
   margin-bottom: 0;
-  color: #07cc91;
+  color: #AE242B;
   float: left;
 }
 
@@ -1166,7 +1166,7 @@ p.help-block li {
 }
 
 #contact .form button[type="submit"] {
-  background: #07cc91;
+  background: #AE242B;
   border: 0;
   border-radius: 3px;
   padding: 10px 30px;
@@ -1196,7 +1196,7 @@ p.help-block li {
   font-size:13px;
 }
 #footer .copyright a{
-  color: #07cc91;	
+  color: #AE242B;	
 }
 #footer .credits {
   text-align: center;
@@ -1206,7 +1206,7 @@ p.help-block li {
 }
 
 #footer .credits a {
-  color: #07cc91;
+  color: #AE242B;
   font-size:12px;
 }
 .owl-carousel .owl-item img {

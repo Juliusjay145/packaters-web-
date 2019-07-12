@@ -23,6 +23,9 @@
 		public function home()
 		{
 			$data['catering'] = $this->ServiceModel->count_catering_service();
+			$data['customer'] = $this->BookingModel->count_booking();
+			$d=array('notification' => 0);
+        	$this->BookingModel->updatenotification($d);
 			$this->load->view('headerV2/header_view');
 			$this->load->view('Catering/catering_home_view', $data);
 			$this->load->view('headerV2/footer_view');

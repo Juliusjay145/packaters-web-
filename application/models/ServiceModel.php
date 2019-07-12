@@ -35,6 +35,7 @@
 		public function get_caterer_service($id)
 		{
 			$this->db->where("pack_caterer_id",$id);
+			$this->db->where('soft_delete', 1);
 			$data = $this->db->get($this->table);
 			return $data->result_array();
 		}

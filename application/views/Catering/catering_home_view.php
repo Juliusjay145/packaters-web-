@@ -235,7 +235,7 @@
                         <a href="<?php echo base_url('ServiceController/service')?>"><i class="fa fa-desktop"></i> Services</a>
                     </li>
 					<li>
-                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction</a>
+                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i>Transaction <span class="badge badge-primary"><?php echo $customer; ?></span></a>
                     </li>
 
 

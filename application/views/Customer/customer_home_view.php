@@ -59,7 +59,7 @@
 			                        <br/>
 			                        <div class="col-md-6">
 			                            <div class="lib-row lib-header">
-			                                <h4><b><a href=""><?php echo $c['cat_name']?></a></b></h4>
+			                                <h4><b><a href="<?php echo base_url('CustomerController/catering_profile')?>/<?php echo $c['id']?>"><?php echo $c['cat_name']?></a></b></h4>
 			                                <div class="lib-header-seperator"></div>
 			                            </div>
 			                            <div class="lib-row lib-desc">
