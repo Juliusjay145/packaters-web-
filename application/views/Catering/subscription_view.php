@@ -7,26 +7,38 @@
 
         <div class="row">
 
-          <div class="col-lg-6">
+          <div class="col-lg-4">
             <div class="box wow fadeInLeft">
               <div class="icon svgImg"><img src="<?php echo base_url('../bootstrap/img/data_b1wx.svg')?>" alt=""></div>
-              <h4 class="title"><a href="">Customer</a></h4>
+              <h4 class="title"><a href="">Gold Catering Services</a></h4>
               <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla.</p>
               <br/>
               <center>
-                <a href="<?php echo base_url('CustomerController/register')?>" class="btn btn-primary">Register now</a>
+                <a href="<?php echo base_url('CateringController/register')?>" class="btn btn-primary">Register now</a>
               </center>  
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-4">
             <div class="box wow fadeInRight">
                <div class="icon svgImg"><img src="<?php echo base_url('../bootstrap/img/recording_lywr.svg')?>" alt=""></div>
-              <h4 class="title"><a href="">Catering Provider</a></h4>
+              <h4 class="title"><a href="">Premium Catering Services</a></h4>
               <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla.</p>
               <br/>
               <center>
-                <a href="<?php echo base_url('CateringController/subscription')?>" class="btn btn-primary">Register now</a>
+                <a href="<?php echo base_url('CateringController/register_premium')?>" class="btn btn-primary">Register now</a>
+              </center>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="box wow fadeInRight">
+               <div class="icon svgImg"><img src="<?php echo base_url('../bootstrap/img/recording_lywr.svg')?>" alt=""></div>
+              <h4 class="title"><a href="">Platinum Catering Services</a></h4>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla.</p>
+              <br/>
+              <center>
+                <a href="<?php echo base_url('CateringController/register_platinum')?>" class="btn btn-primary">Register now</a>
               </center>
             </div>
           </div>

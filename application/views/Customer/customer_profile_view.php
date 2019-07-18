@@ -52,7 +52,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <form>
+                        <form method="POST" action="<?php echo base_url('CustomerController/update_profile')?>">
+                          <input type="hidden" name="id" class="form-control" value="<?php echo $customer[0]['id']; ?>">
                               <div class="form-group row">
                                 <label for="name" class="col-4 col-form-label">First Name</label> 
                                 <div class="col-8">
@@ -66,9 +67,15 @@
                                 </div>
                               </div>
                               <div class="form-group row">
+                                <label for="lastname" class="col-4 col-form-label">Last Name</label> 
+                                <div class="col-8">
+                                  <input name="address" placeholder="Last Name" class="form-control here" type="text" value="<?php echo $customer[0]['cust_address']; ?>">
+                                </div>
+                              </div>
+                              <div class="form-group row">
                                 <label for="newpass" class="col-4 col-form-label">Old Password</label> 
                                 <div class="col-8">
-                                  <input name="newpass" placeholder="Old Password" class="form-control here" type="text">
+                                  <input name="pass" placeholder="Old Password" class="form-control here" type="text" value="<?php echo $customer[0]['password']; ?>">
                                 </div>
                               </div> 
                               <div class="form-group row">

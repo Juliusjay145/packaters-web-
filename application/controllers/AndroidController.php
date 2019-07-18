@@ -10,6 +10,7 @@
 			$this->load->model('ServiceModel');
 			$this->load->model('CategoryModel');
 			$this->load->model('BookingModel');
+			$this->load->model('CommentModel');
 		}
 
 		public function fetch_caterer()
@@ -59,6 +60,13 @@
 			echo json_encode(array('pack_customer' => $data ));
 		}
 
+		public function fetch_booking()
+		{
+			$id = $this->uri->segment(3);
+			$data = $this->BookingModel->get_booking_customer($id);
+			echo json_encode(array('pack_transaction' => $data));
+		}
+
 		public function bookCater()
 		{
 			$add = array(
@@ -79,6 +87,55 @@
 			$this->BookingModel->insert($add);
 
 		}
+
+		public function pay()
+		{
+			$id = $this->uri->segment(3);
+			$data = array(
+
+				'customer_id' => $this->input->post('customer_id'),
+				'pack_address' =>  $this->input->post('pack_address'),
+				'pack_date' =>  $this->input->post('pack_date'),
+				'pack_time' =>  $this->input->post('pack_time'),
+				'status' => "Paid"
+
+			);
+
+			$this->BookingModel->updatecon($data, $id);
+		}
+
+
+		public function comment()
+		{
+
+			$data = array(
+
+				'comment' => $this->input->post('comment'),
+				'pack_customer_name' => $this->input->post('pack_customer_name'),
+				'pack_customer_lname' => $this->input->post('pack_customer_lname'),
+				'pack_caterer_id' => $this->input->post('pack_caterer_id'),
+				'pack_customer_id' => $this->input->post('pack_customer_id')
+			);
+
+				$this->CommentModel->insert($data);
+		}
+
+
+		public function update_profile()
+		{
+			$id = $this->uri->segment(3);
+			$data = array(
+
+				'cust_name' => $this->input->post('cust_name'),
+				'cust_phonenum' =>  $this->input->post('cust_phonenum'),
+				'cust_address' =>  $this->input->post('cust_address')
+
+			);
+
+			$this->CustomerModel->update($data, $id);
+		}
+
+
 	}
 
 

@@ -18,6 +18,28 @@
             $this->load->view('headerV2/footer_view');
 
         }
+
+        public function listservice()
+        {
+            $data['service'] = $this->ServiceModel->get_service();
+            $data['catering'] = $this->CateringModel->get_catering();
+            $this->load->view('headerV2/header_view');
+            $this->load->view('Service/list_services_view', $data);
+            $this->load->view('headerV2/footer_view');
+
+        }
+
+        public function service_profile()
+        {
+            $data['service'] = $this->ServiceModel->get_service();
+            $data['catering'] = $this->CateringModel->get_catering();
+            $this->load->view('headerV2/header_view');
+            $this->load->view('Service/service_profile_view', $data);
+            $this->load->view('headerV2/footer_view');
+        }
+
+
+
         public function add_service()
         {
             $txtservice =  $this->input->post('service_name');
@@ -60,6 +82,22 @@
 
                           $this->ServiceModel->insert($add);
         }
+
+
+        public function update()
+        {
+            $name = $this->input->post('service_name');
+            $details = $this->input->post('service_details');
+            $add = array(
+
+                'service_name' => $name,
+                'service_description' => $details
+                );
+
+            $this->ServiceModel->update($add);
+            $this->_displayAlert('Account has been updated','ServiceController/service');
+        }
+
 
         public function delete_service()
         {

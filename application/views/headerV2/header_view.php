@@ -13,6 +13,7 @@
     <link href="<?php echo base_url('../bootstrapV3/js/morris/morris-0.4.3.min.css')?>" rel="stylesheet" />
     <!-- Custom Styles-->
     <link href="<?php echo base_url('../bootstrapV3/css/custom-styles.css')?>" rel="stylesheet" />
+    <link href="<?php echo base_url('../bootstrapV2/css/comment.css')?>" rel="stylesheet" />
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>

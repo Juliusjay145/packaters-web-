@@ -144,6 +144,27 @@
 		}
 
 
+		public function update_profile()
+		{
+			$txtname = $this->input->post('name');
+	        $lastname = $this->input->post('lastname');
+	        $address = $this->input->post('address');
+	        //$txtdetail = $this->input->post('pass');
+	        $newpass = $this->input->post('newpass');
+
+	        $add = array(
+
+	            'cust_name' => $txtname,
+	            'cust_lastname' => $lastname,
+	            'cust_address' => $address,
+	            'password' => $newpass,
+	            );
+
+	        $this->CustomerModel->update($add);
+	        $this->_displayAlert('Account has been updated','CustomerController/home');	
+	        //redirect(base_url('PestControl/update'));
+		}
+
 
 
 

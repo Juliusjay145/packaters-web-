@@ -29,11 +29,20 @@
 		}
 
 		public function get_client3($id)
-	{
-		$this->db->where("id", $id);
-		$data = $this->db->get($this->table);
-		return $data->result_array();
-	}
+		{
+			$this->db->where("id", $id);
+			$data = $this->db->get($this->table);
+			return $data->result_array();
+		}
+
+		public function update($data, $id)
+		{
+			$this->db->where('id', $id);
+			return $this->db->update($this->table, $data);
+		}
+
+
+		
 
 
  	}
