@@ -15,7 +15,22 @@
 
 		public function fetch_caterer()
 		{
-			$data = $this->CateringModel->get_catering2();
+			$id = $this->uri->segment(3);
+			$data = $this->CateringModel->get_catering_premium($id);
+			echo json_encode(array('pack_caterer' => $data));
+		}
+
+		public function fetch_caterer_platinum()
+		{
+			$id = $this->uri->segment(3);
+			$data = $this->CateringModel->get_catering_platinum($id);
+			echo json_encode(array('pack_caterer' => $data));
+		}
+
+		public function fetch_caterer_gold()
+		{
+			$id = $this->uri->segment(3);
+			$data = $this->CateringModel->get_catering_gold($id);
 			echo json_encode(array('pack_caterer' => $data));
 		}
 

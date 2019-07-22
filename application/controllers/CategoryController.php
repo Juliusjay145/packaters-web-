@@ -14,13 +14,31 @@
 
 
     	
-         public function category($sid)
+        public function category()
         {
-            $data['getpest'] = $this->ServiceModel->get_service_id($sid);
+            $data['getpest'] = $this->ServiceModel->get_service();
             $this->load->view('headerV2/header_view');
             $this->load->view('Category/category_view', $data);
             $this->load->view('headerV2/footer_view');
         }
+
+        public function menu($id)
+        {
+            $data['service'] = $this->ServiceModel->get_service2();
+            $data['menu'] = $this->CategoryModel->get_menu($id);
+            $this->load->view('headerV2/header_view');
+            $this->load->view('Menu/menu_service_view', $data);
+            $this->load->view('headerV2/footer_view');
+        }
+
+        public function menu_profile()
+        {
+            $data['menu'] = $this->CategoryModel->get_menu2();
+            $this->load->view('headerV2/header_view');
+            $this->load->view('Menu/menu_service_profile_view', $data);
+            $this->load->view('headerV2/footer_view');
+        }
+
 
         public function add_category()
         {
@@ -58,6 +76,27 @@
         }
 
 
+        public function update()
+        {
+            $menu_name = $this->input->post('menu_name');
+            $menu_details = $this->input->post('menu_details');
+
+             $add = array(
+
+                'menu_name' => $menu_name,
+                'menu_description' => $menu_details
+                );
+
+            $this->CategoryModel->update($add);
+            $this->_displayAlert('Account has been updated','ServiceController/service');
+        }
+
+
+
+
+        public function _displayAlert($message,$cont){
+            echo "<script>alert('$message');window.location='".base_url()."$cont';</script>";
+        }
 
     }
 

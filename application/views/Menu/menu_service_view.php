@@ -94,46 +94,33 @@
         <div id="page-wrapper" >
             <div id="page-inner">
              <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="page-header">
-                            Add Service<small></small>
-                        </h1>
-                    </div>
                 </div> 
                  <!-- /. ROW  -->
 
 
 
             <?php  foreach($service as $s): ?>
-                <?php  foreach($catering as $c): ?> 
+                <?php  foreach($menu as $m): ?> 
                     <?php  
                                     
-                            if($s['pack_caterer_id'] == $c['id']):
-                                if($c['username'] == $this->session->userdata('username')):
-                                    
-                                    ?>
-
-
-                            <?php if($c['id'] == $s['pack_caterer_id']):?>
+                            if($s['id'] == $m['service_id']):?>
 
            <div class="row">
               <div class="col-sm-6">
                 <div class="card">
-                    <img class="card-img-top" src="<?php echo base_url('../upload/'. $s['service_logo']);?>">
+                    <img class="card-img-top" src="<?php echo base_url('../upload/'. $m['logo']);?>">
                     <br/>
                   <div class="card-body">
-                    <h5 class="card-title"><b><?php echo $s['service_name']?></b></h5>
-                    <p class="card-text"><?php echo $s['service_description']?></p>
-                    <a href="<?php echo base_url('ServiceController/service_profile')?>" class="btn btn-primary">Edit</a>
-                    <a href="<?php echo base_url('CategoryController/menu')?>/<?php echo $s['id']?>" class="btn btn-success">View menu</a> | <a href="<?php echo base_url('ServiceController/delete_service')?>/<?php echo $s['id']?>" class="btn btn-danger">Delete</a>
+                    <h5 class="card-title"><b><?php echo $m['menu_name']?></b></h5>
+                    <p class="card-text"><?php echo $m['menu_description']?></p>
+                    <a href="<?php echo base_url('CategoryController/menu_profile')?>" class="btn btn-primary">Edit</a>
+                    | <a href="<?php echo base_url('ServiceController/delete_service')?>/<?php echo $s['id']?>" class="btn btn-danger">Delete</a>
                   </div>
                 </div>
               </div>
             </div>
             <br/>
-            <?php endif; ?>   
-            <?php endif; ?> 
-            <?php endif; ?> 
+            <?php endif; ?>
             <?php endforeach; ?>   
             <?php endforeach; ?>
      <!-- /. WRAPPER  -->

@@ -23,6 +23,27 @@
 			return $data->result_array();
 		}
 
+		public function get_catering_platinum($id)
+		{
+			$this->db->where("status",$id);
+			$data = $this->db->get($this->table);
+			return $data->result_array();
+		}
+
+		public function get_catering_premium($id)
+		{
+			$this->db->where("status",$id);
+			$data = $this->db->get($this->table);
+			return $data->result_array();
+		}
+
+		public function get_catering_gold($id)
+		{
+			$this->db->where("status",$id);
+			$data = $this->db->get($this->table);
+			return $data->result_array();
+		}
+
 
 
 		public function get_caterer_profile($id)

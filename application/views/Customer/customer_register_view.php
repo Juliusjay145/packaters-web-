@@ -23,6 +23,10 @@
                                 <input type="text" name="number" class="form-control">
                             </div>
                             <div class="form-group">
+                                <label for="username" class="text-info">Profile Picture:</label><br>
+                                <input type="file" name="picture" class="form-control">
+                            </div>
+                            <div class="form-group">
                                 <label for="username" class="text-info">Username:</label><br>
                                 <input type="text" name="username" class="form-control">
                             </div>

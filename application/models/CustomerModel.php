@@ -41,6 +41,12 @@
 			return $this->db->update($this->table, $data);
 		}
 
+		public function update2($data)
+		{
+			$this->db->where('id', $this->input->post('id'));
+			return $this->db->update($this->table, $data);
+		}
+
 
 		
 

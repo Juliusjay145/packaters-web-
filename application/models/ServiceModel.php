@@ -21,6 +21,12 @@
 			return $data->result_array();
 		}
 
+		public function get_service2()
+		{
+			$data = $this->db->get($this->table);
+			return $data->result_array();
+		}
+
 		public function get_service_id($sid){
 			$query = $this->db->get_where('pack_service', array('id' => $sid));
 			return $query->result_array();

@@ -21,6 +21,18 @@
 			return $data->result_array();
 		}
 
+		public function get_menu2()
+		{
+			$data = $this->db->get($this->table);
+			return $data->result_array();
+		}
+
+		public function update($data)
+		{
+			$this->db->where('id', $this->input->post('id'));
+			return $this->db->update($this->table, $data);
+		}
+
 
 
 

@@ -21,8 +21,9 @@
 				     		$customers['cust_name'];
 				     	}
 				     ?>
+				 <?php endforeach; ?>
 		     	<center><h3><?php echo $customers['cust_name'];?>, <?php echo $customers['cust_lastname'];?></h3></center>
-		     	<?php endforeach; ?></h3>
+		     	</h3>
 		     	<br/>
               <a href="#" class="list-group-item list-group-item-action active">Dashboard</a>
               <a href="<?php echo base_url('CustomerController/details')?>" class="list-group-item list-group-item-action">Details</a>
@@ -31,7 +32,7 @@
 			    <button class="list-group-item list-group-item-action" type="button" data-toggle="dropdown">Settings
 			    <span class="caret"></span></button>
 			    <ul class="dropdown-menu">
-	              	<a href="<?php echo base_url('CustomerController/profile')?>"
+	              	<a href="<?php echo base_url('CustomerController/profile')?>/<?php echo $customers['id']?>"
 	              	class="list-group-item list-group-item-action">Profile</a>
 	              	<a href="<?php echo base_url('CustomerController/logout')?>" 
 	              	class="list-group-item list-group-item-action">Logout</a>

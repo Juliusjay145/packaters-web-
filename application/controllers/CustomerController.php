@@ -72,10 +72,10 @@
 			$this->load->view('header/footer_view');
 		}
 
-		public function profile()
+		public function profile($id)
 		{
 			$data['cater'] = $this->CateringModel->get_catering();
-			$data['customer'] = $this->CustomerModel->get_client2();
+			$data['customer'] = $this->CustomerModel->get_client3($id);
 			$data['book'] = $this->BookingModel->get_booking();
 			$this->load->view('header/header_view');
 			$this->load->view('Customer/customer_profile_view', $data);
@@ -91,6 +91,10 @@
 			$txtusername = $this->input->post('username');
 			$txtpassword = $this->input->post('password');
 
+
+			$image = $this->input->post('picture');
+			$path = "http://10.0.2.2/packaters/upload/". $image;
+
 			$add = array(
 
 				'cust_name' => $name,
@@ -98,7 +102,9 @@
 				'cust_address' => $txtaddress,
 				'cust_phonenum' => $txtcontact,
 				'username' => $txtusername,
-				'password' => $txtpassword
+				'password' => $txtpassword,
+				'picture' => $image,
+				'path_image' => $path
 
 				);
 
@@ -150,7 +156,7 @@
 	        $lastname = $this->input->post('lastname');
 	        $address = $this->input->post('address');
 	        //$txtdetail = $this->input->post('pass');
-	        $newpass = $this->input->post('newpass');
+	        $newpass = $this->input->post('pass');
 
 	        $add = array(
 
@@ -160,7 +166,7 @@
 	            'password' => $newpass,
 	            );
 
-	        $this->CustomerModel->update($add);
+	        $this->CustomerModel->update2($add);
 	        $this->_displayAlert('Account has been updated','CustomerController/home');	
 	        //redirect(base_url('PestControl/update'));
 		}

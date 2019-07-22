@@ -21,10 +21,11 @@
                 $customers['cust_name'];
               }
              ?>
+         <?php endforeach; ?>
           <center><h3><?php echo $customers['cust_name'];?>, <?php echo $customers['cust_lastname'];?></h3></center>
-          <?php endforeach; ?></h3>
+          </h3>
           <br/>
-              <a href="<?php echo base_url('CustomerController/home')?>" class="list-group-item list-group-item-action">Dashboard</a>
+              <a href="#" class="list-group-item list-group-item-action">Dashboard</a>
               <a href="<?php echo base_url('CustomerController/details')?>" class="list-group-item list-group-item-action active">Details</a>
               <a href="#" class="list-group-item list-group-item-action">Reports</a>
               <div class="dropdown">
@@ -63,6 +64,7 @@
             <?php foreach($book as $b):?>
               <?php foreach($customer as $c):?>
                 <?php if($b['customer_id'] == $c['id']):?>
+                  <?php if($c['username'] == $this->session->userdata('username')):?>
 
             <tbody>
               <tr>
@@ -73,6 +75,7 @@
                     <td><?php echo $b['status']?></td>
                     <td><?php echo $b['price'] ?></td>
               </tr>
+              <?php endif; ?>
               <?php endif; ?>
               <?php endforeach; ?>
                 <?php endforeach; ?> 

@@ -102,7 +102,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form action="<?php echo base_url('CategoryController/add_category')?>" method="post">
-                                    <input type="hidden" name="service_id" class="form-control" value="<?php echo $getpest[0]['id']; ?>">
+                    <input type="hidden" name="service_id" class="form-control" value="<?php echo $getpest[0]['id']; ?>">
                                         <div class="form-group">
                                             <label>Menu Name</label>
                                             <input class="form-control" name="name" placeholder="Enter text">
