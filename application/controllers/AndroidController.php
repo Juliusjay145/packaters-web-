@@ -95,11 +95,32 @@
 				'customer_id' => $this->input->post('customer_id'),
 				'customer_fname' => $this->input->post('customer_fname'),
 				'customer_lname' => $this->input->post('customer_lname'),
+				'path_image' => $this->input->post('path_image'),
 				'package_id' => $this->input->post('package_id'),
 				'price' => $this->input->post('price')
 			);
 
 			$this->BookingModel->insert($add);
+
+		}
+
+		public function register_customer()
+		{
+			$add = array(
+
+
+				'cust_name' => $this->input->post('package_name'),
+				'cust_lastname' => $this->input->post('package_address'),
+				'cust_phonenum' => $this->input->post('p_date'),
+				'cust_address' => $this->input->post('p_time'),
+				'username' => $this->input->post('pack_caterer_id'),
+				'password' => $this->input->post('customer_id'),
+				'path_image' => $this->input->post('customer_fname'),
+				'picture' => $this->input->post('customer_lname'),
+				'price' => "Customer"
+			);
+
+			$this->CustomerModel->insert($add);
 
 		}
 
