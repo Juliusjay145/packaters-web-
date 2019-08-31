@@ -229,27 +229,15 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="<?php echo base_url('AdminController/home')?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('ServiceController/service')?>"><i class="fa fa-desktop"></i> Services</a>
+                        <a href="<?php echo base_url('AdminController/get_customer')?>"><i class="fa fa-desktop"></i> Customer</a>
                     </li>
                     <li>
-                        <a class="active-menu" href="chart.html"><i class="fa fa-bar-chart-o active"></i> Transaction</a>
+                        <a href="<?php echo base_url('AdminController/get_client')?>"><i class="fa fa-desktop"></i> Client</a>
                     </li>
-
-
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> Category<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="<?php echo base_url('CategoryController/category')?>">Add Menu</a>
-                            </li>
-                            <li>
-                                <a href="#">List of Menu</a>
-                            </li>
-                        </ul>
-                    </li>
+                    
                 </ul>
 
             </div>
@@ -263,7 +251,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            Profile<small></small>
+                            Transaction <small>Summary of your App</small>
                         </h1>
                     </div>
                 </div>
@@ -272,48 +260,24 @@
                 <!-- /. ROW  -->
 
                 <div class="row">
-                    <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Update Profile
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form action="<?php echo base_url('CateringController/update')?>" method="post">
-                    <input type="hidden" name="id" class="form-control" value="<?php echo $cateringss[0]['id']; ?>">
-                                        <div class="form-group">
-                                            <label>Catering Name</label>
-                                            <input class="form-control" name="cat_name" placeholder="Enter text" value="<?php echo $cateringss[0]['cat_name']; ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Address</label>
-                                            <input class="form-control" name="cat_address" placeholder="Enter text" value="<?php echo $cateringss[0]['cat_address']; ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Contact Number</label>
-                                            <input class="form-control" name="cat_contactno" placeholder="Enter text" value="<?php echo $cateringss[0]['cat_contactno']; ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Description</label>
-                                            <textarea class="form-control" name="cat_details" rows="3"><?php echo $cateringss[0]['cat_details']; ?></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Old password</label>
-                                            <input type="password" class="form-control" name="cat_password" value="<?php echo $cateringss[0]['password']; ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>New password</label>
-                                            <input type="password" class="form-control" name="cat_oldpass">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Add Service</button>
-                                    </form>
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
-                               
+                    <table class="table table-striped custab">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                        </thead>
 
-                                <div class="row">
-                <div class="col-md-12">
+                        <?php foreach($client as $c): ?>
+                                <tr>
+                                    <td><?php echo $c['cust_name']?></td>
+                                    <td class="text-center"><a href="<?php echo base_url('AdminController/deactivate_client')?>/<?php echo $c['id']; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> <?php echo $c['status'];?></a></td>
+                                </tr>
+          
+                            <?php endforeach; ?>
+                        </table>
+                        </div>
+                    </div>
                 </div>
                 <!-- /. ROW  -->
             </div>

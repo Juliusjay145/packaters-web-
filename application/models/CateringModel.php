@@ -23,6 +23,26 @@
 			return $data->result_array();
 		}
 
+
+		public function get_catering4()
+		{
+			$data = $this->db->get($this->table);
+			return $data->result_array();
+		}
+
+
+		public function get_catering3($id)
+		{
+			$this->db->where("id", $id);
+			$data = $this->db->get($this->table);
+			return $data->result_array();
+		}
+
+		public function get_catering_id($sid){
+			$query = $this->db->get_where('pack_caterer', array('id' => $sid));
+			return $query->result_array();
+		}
+
 		public function get_catering_platinum($id)
 		{
 			$this->db->where("status",$id);
@@ -68,6 +88,11 @@
 			return $this->db->update($this->table, $data);
 		}
 
+
+		public function deactivate($data, $id){
+			$this->db->where('id', $id);
+			return $this->db->update($this->table, $data);
+		}	
 
 
 

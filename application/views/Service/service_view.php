@@ -117,7 +117,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>File input</label>
-                                            <input type="file" name="logo">
+                                            <input type="file" name="logo" class="form-control"><br/> Choose file to upload
                                         </div>
                                         <div class="form-group">
                                             <label>Service Description</label>

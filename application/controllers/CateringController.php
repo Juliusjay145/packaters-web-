@@ -30,6 +30,7 @@
         	$this->BookingModel->updatenotification($d);
         	$s=array('notification' => 0);
         	$this->CommentModel->updatenotif($s);
+        	$data['cater'] = $this->CateringModel->get_catering();
 			$this->load->view('headerV2/header_view');
 			$this->load->view('Catering/catering_home_view', $data);
 			$this->load->view('headerV2/footer_view');
@@ -46,9 +47,9 @@
 			$this->load->view('headerV2/footer_view');
 		}
 
-		public function profile()
+		public function profile($sid)
 		{
-			$data['cater'] = $this->CateringModel->get_catering();
+			$data['cateringss'] = $this->CateringModel->get_catering_id($sid);
 			$this->load->view('headerV2/header_view');
 			$this->load->view('Catering/profile_cater_view', $data);
 			$this->load->view('headerV2/footer_view');
@@ -116,7 +117,7 @@
 
 
 			$image = $this->input->post('logo');
-        	$path = "http://10.0.2.2/packaters/upload/". $image;
+        	$path = "http://192.168.43.19/packaters/upload/". $image;
 
          	$add = array(
                 'cat_name' => $this->input->post('name'),
@@ -126,10 +127,14 @@
                 'username' => $this->input->post('username'),
                 'password' => $this->input->post('password'),
                 "logo"=> $image,
-                "path_image"=> $path
+                "path_image"=> $path,
+                "status" => "Gold",
+                "lat" => "10.2971383",
+                "longitude" => "123.8971083"
                         
        		);
                 $this->CateringModel->insert($add);
+                $this->_displayAlert('Register Successfully','CateringController/login_view');
                 //$this->_displayAlert('Account Inerted','PestControl/index');
 		}
 
@@ -162,6 +167,7 @@
                         
        		);
                 $this->CateringModel->insert($add);
+                $this->_displayAlert('Register Successfully','CateringController/login_view');
                 //$this->_displayAlert('Account Inerted','PestControl/index');
 		}
 
@@ -190,10 +196,13 @@
                 'password' => $this->input->post('password'),
                 "logo"=> $image,
                 "path_image"=> $path,
-                "status" => "Platinum"
+                "status" => "Platinum",
+                "lat" => "10.2971383",
+                "longitude" => "123.8971083"
                         
        		);
                 $this->CateringModel->insert($add);
+                $this->_displayAlert('Register Successfully','CateringController/login_view');
                 //$this->_displayAlert('Account Inerted','PestControl/index');
 		}
 
@@ -220,14 +229,14 @@
 					// 	$this->_displayAlert('Welcome Client','clients/home');
 					// }
 
-					 // if($result[0]['status']=='Active'){
+					 if($result[0]['active']=='Active'){
 	                    
 	                    if($result[0]['user_type']=='catering'){
 	                    $this->_displayAlert('Login Successfully','CateringController/home');
 	                    
 	                    }
 
-	                // }
+	                }
 
 	                else{
 	                    $this->_displayAlert('Please contact the admin to update your status','Clients/valid');

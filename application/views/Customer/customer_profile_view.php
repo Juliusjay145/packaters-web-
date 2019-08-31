@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <form method="POST" action="<?php echo base_url('CustomerController/update_profile')?>">
-                          <input type="hidden" name="id" class="form-control" value="<?php echo $customer[0]['id']; ?>">
+                  <input type="hidden" name="id" class="form-control" value="<?php echo $customer[0]['id']; ?>">
                               <div class="form-group row">
                                 <label for="name" class="col-4 col-form-label">First Name</label> 
                                 <div class="col-8">

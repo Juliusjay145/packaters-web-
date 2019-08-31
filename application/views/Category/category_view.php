@@ -103,13 +103,14 @@
                                 <div class="col-lg-6">
                                     <form action="<?php echo base_url('CategoryController/add_category')?>" method="post">
                     <input type="hidden" name="service_id" class="form-control" value="<?php echo $getpest[0]['id']; ?>">
+                    
                                         <div class="form-group">
                                             <label>Menu Name</label>
                                             <input class="form-control" name="name" placeholder="Enter text">
                                         </div>
                                         <div class="form-group">
                                             <label>File input</label>
-                                            <input type="file" name="menu_logo">
+                                            <input type="file" name="menu_logo" class="form-control"><br/> Choose file to upload
                                         </div>
                                         
                                         <div class="form-group">

@@ -288,11 +288,13 @@
                             <?php foreach($book as $b): ?>
 
                                 <?php  
-                                    
-                                        if($c['id'] == $b['pack_caterer_id']):
 
-                                            if($c['username'] == $this->session->userdata('username')):
+                                if($c['username'] == $this->session->userdata('username')):
                                     
+                                        if($b['pack_caterer_id'] == $c['id']):
+
+            
+                                                                                    
                                     ?> 
 
                                 <tr>

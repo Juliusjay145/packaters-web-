@@ -72,10 +72,10 @@
 			$this->load->view('header/footer_view');
 		}
 
-		public function profile($id)
+		public function profile($customer_id)
 		{
 			$data['cater'] = $this->CateringModel->get_catering();
-			$data['customer'] = $this->CustomerModel->get_client3($id);
+			$data['customer'] = $this->CustomerModel->get_customer_id($customer_id);
 			$data['book'] = $this->BookingModel->get_booking();
 			$this->load->view('header/header_view');
 			$this->load->view('Customer/customer_profile_view', $data);
@@ -93,7 +93,7 @@
 
 
 			$image = $this->input->post('picture');
-			$path = "http://10.0.2.2/packaters/upload/". $image;
+			$path = "http://192.168.43.19/packaters/upload/". $image;
 
 			$add = array(
 
@@ -109,6 +109,7 @@
 				);
 
 				$this->CustomerModel->insert($add);
+				$this->_displayAlert('Account has been updated','CustomerController/login_view');
 				//$this->_displayAlert('Account Inerted');
 		}
 
@@ -134,17 +135,17 @@
 					// 	$this->_displayAlert('Welcome Client','clients/home');
 					// }
 
-					 // if($result[0]['status']=='Active'){
+					 if($result[0]['status']=='Active'){
 	                    
 	                    if($result[0]['user_type']=='Customer'){
 	                    $this->_displayAlert('Login Successfully','CustomerController/home');
 	                    
 	                    }
 
-	                // }
+	                }
 
 	                else{
-	                    $this->_displayAlert('Please contact the admin to update your status','Clients/valid');
+	                    $this->_displayAlert('Please contact the admin to update your status','CustomerController/login_view');
 	                } 
 	        }        
 		}

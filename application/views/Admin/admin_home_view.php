@@ -210,7 +210,7 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="<?php echo base_url('CateringController/profile')?>"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
@@ -229,26 +229,13 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('ServiceController/service')?>"><i class="fa fa-desktop"></i> Services</a>
+                        <a href="<?php echo base_url('AdminController/get_customer')?>"><i class="fa fa-desktop"></i> Customer</a>
                     </li>
-                    <li>
-                        <a class="active-menu" href="chart.html"><i class="fa fa-bar-chart-o active"></i> Transaction</a>
-                    </li>
-
-
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> Category<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="<?php echo base_url('CategoryController/category')?>">Add Menu</a>
-                            </li>
-                            <li>
-                                <a href="#">List of Menu</a>
-                            </li>
-                        </ul>
+                     <li>
+                        <a href="<?php echo base_url('AdminController/get_client')?>"><i class="fa fa-desktop"></i> Client</a>
                     </li>
                 </ul>
 
@@ -263,57 +250,71 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            Profile<small></small>
+                            Dashboard <small>Summary of your App</small>
                         </h1>
+						<ol class="breadcrumb">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Library</a></li>
+                            <li class="active">Data</li>
+                        </ol>
                     </div>
                 </div>
-                
-                
+				
+				
                 <!-- /. ROW  -->
 
                 <div class="row">
-                    <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Update Profile
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-green green">
+                            <div class="panel-left pull-left green">
+                                <i class="fa fa-bar-chart-o fa-5x"></i>
+                                
+                            </div>
+                            <div class="panel-right pull-right">
+								<h3>0</h3>
+                               <strong> Service</strong>
+                            </div>
                         </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form action="<?php echo base_url('CateringController/update')?>" method="post">
-                    <input type="hidden" name="id" class="form-control" value="<?php echo $cateringss[0]['id']; ?>">
-                                        <div class="form-group">
-                                            <label>Catering Name</label>
-                                            <input class="form-control" name="cat_name" placeholder="Enter text" value="<?php echo $cateringss[0]['cat_name']; ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Address</label>
-                                            <input class="form-control" name="cat_address" placeholder="Enter text" value="<?php echo $cateringss[0]['cat_address']; ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Contact Number</label>
-                                            <input class="form-control" name="cat_contactno" placeholder="Enter text" value="<?php echo $cateringss[0]['cat_contactno']; ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Description</label>
-                                            <textarea class="form-control" name="cat_details" rows="3"><?php echo $cateringss[0]['cat_details']; ?></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Old password</label>
-                                            <input type="password" class="form-control" name="cat_password" value="<?php echo $cateringss[0]['password']; ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>New password</label>
-                                            <input type="password" class="form-control" name="cat_oldpass">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Add Service</button>
-                                    </form>
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
-                               
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue blue">
+                              <div class="panel-left pull-left blue">
+                                <i class="fa fa-shopping-cart fa-5x"></i>
+								</div>
+                                
+                            <div class="panel-right pull-right">
+							<h3>0</h3>
+                               <strong> Completed Transaction</strong>
 
-                                <div class="row">
-                <div class="col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-red red">
+                            <div class="panel-left pull-left red">
+                                <i class="fa fa fa-comments fa-5x"></i>
+                               
+                            </div>
+                            <div class="panel-right pull-right">
+							 <h3>0</h3>
+                               <strong> Confirmed Request </strong>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-brown brown">
+                            <div class="panel-left pull-left brown">
+                                <i class="fa fa-users fa-5x"></i>
+                                
+                            </div>
+                            <div class="panel-right pull-right">
+							<h3>0</h3>
+                             <strong>Canceled Transaction</strong>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- /. ROW  -->
             </div>

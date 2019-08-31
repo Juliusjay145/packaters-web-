@@ -10,38 +10,38 @@
 <br/><br/><br/><br/>
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-3 ">
-		     <div class="list-group ">
-		     	<center><img src="http://localhost/packaters/upload/debut.JPG" class="rounded-circle" /></center>
-		     	<?php foreach($customer as $customers): ?>
-			     	<?php
-				     	if($this->session->userdata('username') == $customers['username'])
-				     	{
-				     		$customers['cust_name'];
-				     	}
-				     ?>
-		     	<center><h3><?php echo $customers['cust_name'];?>, <?php echo $customers['cust_lastname'];?></h3></center>
-		     	<?php endforeach; ?></h3>
-		     	<br/>
-              <a href="#" class="list-group-item list-group-item-action active">Dashboard</a>
-              <a href="<?php echo base_url('CustomerController/details')?>" class="list-group-item list-group-item-action">Details</a>
+  <div class="row">
+    <div class="col-md-3 ">
+         <div class="list-group ">
+          <center><img src="http://localhost/packaters/upload/debut.JPG" class="rounded-circle" /></center>
+          <?php foreach($customer as $customers): ?>
+            <?php
+              if($this->session->userdata('username') == $customers['username'])
+              {
+                $customers['cust_name'];
+              }
+             ?>
+         <?php endforeach; ?>
+          <center><h3><?php echo $customers['cust_name'];?>, <?php echo $customers['cust_lastname'];?></h3></center>
+          </h3>
+          <br/>
+              <a href="#" class="list-group-item list-group-item-action">Dashboard</a>
+              <a href="<?php echo base_url('CustomerController/details')?>" class="list-group-item list-group-item-action active">Details</a>
               <a href="#" class="list-group-item list-group-item-action">Reports</a>
               <div class="dropdown">
-			    <button class="list-group-item list-group-item-action" type="button" data-toggle="dropdown">Settings
-			    <span class="caret"></span></button>
-			    <ul class="dropdown-menu">
-	              	<a href="<?php echo base_url('CustomerController/profile')?>"
-	              	class="list-group-item list-group-item-action">Profile</a>
-	              	<a href="<?php echo base_url('CustomerController/logout')?>" 
-	              	class="list-group-item list-group-item-action">Logout</a>
-              	</ul>
-  				</div>
+          <button class="list-group-item list-group-item-action" type="button" data-toggle="dropdown">Settings
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+                  <a href="<?php echo base_url('CustomerController/profile')?>/<?php echo $customers['id']?>"
+                  class="list-group-item list-group-item-action">Profile</a>
+                  <a href="<?php echo base_url('CustomerController/logout')?>" 
+                  class="list-group-item list-group-item-action">Logout</a>
+                </ul>
+          </div>
               
               
             </div> 
-		</div>
-
+    </div>
 
 		<div class="col-md-9">
 		    <div class="card">

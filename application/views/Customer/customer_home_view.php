@@ -32,7 +32,15 @@
 			    <button class="list-group-item list-group-item-action" type="button" data-toggle="dropdown">Settings
 			    <span class="caret"></span></button>
 			    <ul class="dropdown-menu">
-	              	<a href="<?php echo base_url('CustomerController/profile')?>/<?php echo $customers['id']?>"
+			    	<?php foreach($customer as $customers): ?>
+			     	<?php
+				     	if($this->session->userdata('username') == $customers['username'])
+				     	{
+				     		$id = $customers['id'];
+				     	}
+				     ?>
+				 <?php endforeach; ?>
+	              	<a href="<?php echo base_url('CustomerController/profile')?>/<?php echo $id; ?>"
 	              	class="list-group-item list-group-item-action">Profile</a>
 	              	<a href="<?php echo base_url('CustomerController/logout')?>" 
 	              	class="list-group-item list-group-item-action">Logout</a>

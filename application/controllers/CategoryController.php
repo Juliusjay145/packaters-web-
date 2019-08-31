@@ -14,9 +14,9 @@
 
 
     	
-        public function category()
+        public function category($sid)
         {
-            $data['getpest'] = $this->ServiceModel->get_service();
+            $data['getpest'] = $this->ServiceModel->get_service_id($sid);
             $this->load->view('headerV2/header_view');
             $this->load->view('Category/category_view', $data);
             $this->load->view('headerV2/footer_view');
@@ -50,7 +50,7 @@
             $services = $this->ServiceModel->get_service();
 
             $image = $this->input->post('menu_logo');
-            $path = "http://10.0.2.2/packaters/upload/". $image;
+            $path = "http://192.168.43.19/packaters/upload/". $image;
 
             foreach($data as $d):
                 if($d['username'] == $this->session->userdata('username'))
@@ -73,6 +73,7 @@
 
 
                       $this->CategoryModel->insert($add);
+                      $this->_displayAlert('Account has been updated','ServiceController/service');
         }
 
 

@@ -50,7 +50,7 @@
             $services = $this->ServiceModel->get_service();
             
             $image = $this->input->post('logo');
-            $path = "http://10.0.2.2/packaters/upload/". $image;
+            $path = "http://192.168.43.19/packaters/upload/". $image;
 
             foreach($data as $d):
 					if($d['username'] == $this->session->userdata('username'))
@@ -81,6 +81,7 @@
     
 
                           $this->ServiceModel->insert($add);
+                          $this->_displayAlert('Service Added Successfully','ServiceController/service');
         }
 
 

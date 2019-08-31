@@ -20,6 +20,12 @@
 			echo json_encode(array('pack_caterer' => $data));
 		}
 
+		public function get_map()
+		{
+			$data = $this->CateringModel->get_catering();
+			echo json_encode(array('pack_caterer' => $data));
+		}
+
 		public function fetch_caterer_platinum()
 		{
 			$id = $this->uri->segment(3);
@@ -101,28 +107,30 @@
 			);
 
 			$this->BookingModel->insert($add);
-
 		}
 
-		public function register_customer()
-		{
-			$add = array(
+		// public function register_customer()
+		// {
+		// 	$add = array(
+
+		// 		$image = $this->input->post('picture');
+		// 		$path = "http://10.0.2.2/packaters/upload/". $image;
 
 
-				'cust_name' => $this->input->post('package_name'),
-				'cust_lastname' => $this->input->post('package_address'),
-				'cust_phonenum' => $this->input->post('p_date'),
-				'cust_address' => $this->input->post('p_time'),
-				'username' => $this->input->post('pack_caterer_id'),
-				'password' => $this->input->post('customer_id'),
-				'path_image' => $this->input->post('customer_fname'),
-				'picture' => $this->input->post('customer_lname'),
-				'price' => "Customer"
-			);
+		// 		'cust_name' => $this->input->post('package_name'),
+		// 		'cust_lastname' => $this->input->post('package_address'),
+		// 		'cust_phonenum' => $this->input->post('p_date'),
+		// 		'cust_address' => $this->input->post('p_time'),
+		// 		'username' => $this->input->post('pack_caterer_id'),
+		// 		'password' => $this->input->post('customer_id'),
+		// 		'path_image' => $path,
+		// 		'picture' => $this->input->post('customer_lname'),
+		// 		'price' => "Customer"
+		// 	);
 
-			$this->CustomerModel->insert($add);
+		// 	$this->CustomerModel->insert($add);
 
-		}
+		// }
 
 		public function pay()
 		{

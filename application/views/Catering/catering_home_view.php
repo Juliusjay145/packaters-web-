@@ -210,7 +210,17 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="<?php echo base_url('CateringController/profile')?>"><i class="fa fa-user fa-fw"></i> User Profile</a>
+            <li>
+                <?php foreach($cater as $c): ?>
+                    <?php
+                        if($this->session->userdata('username') == $c['username'])
+                        {
+                            $id = $c['id'];
+                        }
+                     ?>
+                 <?php endforeach; ?>
+
+                <a href="<?php echo base_url('CateringController/profile')?>/<?php echo $id; ?>"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>

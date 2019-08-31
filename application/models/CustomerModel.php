@@ -47,9 +47,17 @@
 			return $this->db->update($this->table, $data);
 		}
 
+		public function deactivate($data, $id){
+			$this->db->where('id', $id);
+			return $this->db->update($this->table, $data);
+		}
+
 
 		
-
+		public function get_customer_id($customer_id){
+			$query = $this->db->get_where('pack_customer', array('id' => $customer_id));
+			return $query->result_array();
+		}
 
  	}
 
