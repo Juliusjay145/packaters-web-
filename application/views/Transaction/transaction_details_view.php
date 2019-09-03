@@ -20,7 +20,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><b>Pa</b>ckaters</a>
+                <?php foreach($cater as $c): ?>
+                 
+                 <?php
+                    if($this->session->userdata('username') == $c['username']):
+                    
+                        $c['cat_name'];
+                        //$id = $pestcontrol['pestcontrol_id'];
+                    
+                 ?>
+
+                
+                <a class="navbar-brand" href="index.html"><b><?php echo $c['cat_name']; ?>
+                <?php endif; ?>    
+                <?php endforeach; ?>    
+            </a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -283,15 +297,17 @@
                             </tr>
                         </thead>
 
-                            <?php foreach($cater as $c): ?>
-                            <?php foreach($customer as $customers): ?>
                             <?php foreach($book as $b): ?>
+                            <?php foreach($cater as $c): ?>
+                            
 
                                 <?php  
 
-                                if($c['username'] == $this->session->userdata('username')):
+                                if($b['pack_caterer_id'] == $c['id']):
+
+                                    if($c['username'] == $this->session->userdata('username')):
                                     
-                                        if($b['pack_caterer_id'] == $c['id']):
+                                        
 
             
                                                                                     
@@ -302,11 +318,10 @@
                                     <td><?php echo $b['pack_address']?></td>
                                     <td><?php echo $b['package_name']?></td>
                                     <td><?php echo $b['price']?></td>
-                                    <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                                    <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Confirm</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
                                 </tr>
                             <?php endif; ?>
                             <?php endif; ?>
-                            <?php endforeach; ?>
                             <?php endforeach; ?>
                             <?php endforeach; ?>
                         </table>

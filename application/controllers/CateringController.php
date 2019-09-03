@@ -12,6 +12,7 @@
 			$this->load->model('BookingModel');
 			$this->load->model('CustomerModel');
 			$this->load->model('CommentModel');
+			$this->load->library('Session');
 		}
 
 		public function index()
@@ -31,8 +32,8 @@
         	$s=array('notification' => 0);
         	$this->CommentModel->updatenotif($s);
         	$data['cater'] = $this->CateringModel->get_catering();
-			$this->load->view('headerV2/header_view');
-			$this->load->view('Catering/catering_home_view', $data);
+			$this->load->view('headerV2/header_view', $data);
+			$this->load->view('Catering/catering_home_view');
 			$this->load->view('headerV2/footer_view');
 		}
 
@@ -50,6 +51,7 @@
 		public function profile($sid)
 		{
 			$data['cateringss'] = $this->CateringModel->get_catering_id($sid);
+			$data['cater'] = $this->CateringModel->get_catering();
 			$this->load->view('headerV2/header_view');
 			$this->load->view('Catering/profile_cater_view', $data);
 			$this->load->view('headerV2/footer_view');

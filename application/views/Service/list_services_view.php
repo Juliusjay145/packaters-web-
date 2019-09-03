@@ -16,7 +16,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><b>Pa</b>ckaters</a>
+               <?php foreach($catering as $c): ?>
+                 
+                 <?php
+                    if($this->session->userdata('username') == $c['username']):
+                        $c['cat_name'];
+                        //$id = $pestcontrol['pestcontrol_id'];
+                 ?>
+
+                <a class="navbar-brand" href="index.html"><b><?php echo $c['cat_name']; ?>
+                <?php endif;  ?>
+                <?php endforeach; ?>
+            </a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
