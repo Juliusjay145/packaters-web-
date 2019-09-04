@@ -27,9 +27,13 @@
   <link href="<?php echo base_url('../bootstrap/lib/ionicons/css/ionicons.min.css')?>" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
+
   <link href="<?php echo base_url('../bootstrap/css/style.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('../bootstrap/css/card.css')?>" rel="stylesheet">
+  <link href="<?php echo base_url('../bootstrap/css/cards.css')?>" rel="stylesheet">
   <link href="<?php echo base_url('../bootstrap/css/w3.css')?>" rel="stylesheet">
+  <link href="<?php echo base_url('../bootstrap/css/btn3d.css')?>" rel="stylesheet">
+  <link href="<?php echo base_url('../bootstrap/css/card2.css')?>" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>

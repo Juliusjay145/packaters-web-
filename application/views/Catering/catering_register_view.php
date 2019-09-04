@@ -1,3 +1,4 @@
+ <div id="redbg" class="redbg"> 
  <div id="login">
         <h3 class="text-center text-white pt-5"></h3>
         <div class="container">
@@ -7,7 +8,7 @@
                         <form id="login-form" class="form" action="<?php echo base_url('CateringController/add_register')?>" method="post">
                             <h3 class="text-center text-info">Register Catering Provider</h3>
                             <div class="form-group">
-                                <label for="username" class="text-info">Name:</label><br>
+                                <label for="username" class="text-info">First Name:</label><br>
                                 <input type="text" name="name" class="form-control">
                             </div>
                             <div class="form-group">
@@ -36,7 +37,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Register">
+                                <input type="submit" name="submit" class="btn btn-primary btn-lg btn3d" value="Register">
                             </div>
                             <div id="register-link" class="text-right">
                                 <a href="<?php echo base_url('LandingPageController/register')?>" class="text-info">Register here</a>

@@ -1,16 +1,22 @@
+ <div id="redbg2" class="redbg2"> 
 <header id="header">
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto"><span>..</span>Packaters</a></h1> 
+        <h1><a href="#body" class="scrollto"><div class="hero-banner" >
+        <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 20%;height: 85px; width: 80px; margin-top: -15px; margin-bottom: -20px " alt="" class="img-fluid">
+
+
+
+      </div> 
         <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="about">About Us</a></li>
+          <li><a href="services">Services</a></li>
           <li><a href="<?php echo base_url('LandingPageController/login')?>">Login</a></li>
           <li><a href="<?php echo base_url('LandingPageController/register')?>">Register</a></li>
         </ul>
@@ -18,8 +24,8 @@
     </div>
   </header><!-- #header -->
 
-  <section id="hero" class="clearfix">
-<div class="container">
+  <section id="hero" class="clearfix" style="height: 102%">
+    <div class="container">
 
       <div class="hero-banner">
         <img src="<?php echo base_url('../bootstrap/img/icon.png')?>" alt="" class="img-fluid">
@@ -33,9 +39,13 @@
       </div>
 
     </div> 
-  </section><!-- #Hero -->
+  </section>
+
+  <!-- #Hero -->
 
   <main id="main">
+
+
 
     <!--==========================
       About Section
@@ -64,7 +74,12 @@
         </div>
 
       </div>
-    </section><!-- #about -->
+    </section>
+
+    <!-- #about -->
+
+
+
 
     <section id="services">
       <div class="container">
@@ -111,21 +126,18 @@
 
     
 
-    <section id="call-to-action" class="wow fadeInUp">
+    <section id="redbg" class="wow fadeInUp">
       <div class="container">
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
-            <h3 class="cta-title">Get Our Service</h3>
-            <p class="cta-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#contact">Contact Us</a>
+            <h3 class="cta-title" style="color: white">Get Our Service</h3>
+            <p class="cta-text" style="color:white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
 
       </div>
     </section><!-- #call-to-action -->
-
+</div>
 
 
 

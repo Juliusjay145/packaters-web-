@@ -7,7 +7,62 @@
 
 ?>
 
-<div id="wrapper">
+<style>
+    html,body {
+    height:100%;
+    width:100%;
+    position:relative;
+}
+#background-carousel{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+.carousel,
+.carousel-inner {
+    width:100%;
+    height:100%;
+    z-index:0;
+    overflow:hidden;
+}
+.item {
+    width:100%;
+    height:100%;
+    background-position:center center;
+    background-size:cover;
+    z-index:0;
+}
+ 
+#content-wrapper {
+    position:absolute;
+    z-index:1 !important;
+    min-width:100%;
+    min-height:100%;
+}
+.well {
+    opacity:0.85
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
+<div id="wrapper" class="card2" >
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -107,46 +162,55 @@
              <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            Add Service<small></small>
+                            List of Service<small></small>
                         </h1>
                     </div>
-                </div> 
+            </div> 
                  <!-- /. ROW  -->
 
-
-
+<div class="container" style="border: 1px solid red;">
+      <div class="row"> 
             <?php  foreach($service as $s): ?>
                 <?php  foreach($catering as $c): ?> 
                     <?php  
                                     
                             if($s['pack_caterer_id'] == $c['id']):
-                                if($c['username'] == $this->session->userdata('username')):
-                                    
-                                    ?>
-
-
+                                if($c['username'] == $this->session->userdata('username')):?>
                             <?php if($c['id'] == $s['pack_caterer_id']):?>
 
-           <div class="row">
-              <div class="col-sm-6">
-                <div class="card">
-                    <img class="card-img-top" src="<?php echo base_url('../upload/'. $s['service_logo']);?>">
-                    <br/>
-                  <div class="card-body">
-                    <h5 class="card-title"><b><?php echo $s['service_name']?></b></h5>
-                    <p class="card-text"><?php echo $s['service_description']?></p>
-                    <a href="<?php echo base_url('ServiceController/service_profile')?>" class="btn btn-primary">Edit</a>
-                    <a href="<?php echo base_url('CategoryController/menu')?>/<?php echo $s['id']?>" class="btn btn-success">View menu</a> | <a href="<?php echo base_url('ServiceController/delete_service')?>/<?php echo $s['id']?>" class="btn btn-danger">Delete</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+         
+                  
+                      <div class="col-md-6" style="">
+                        <div class="card"  style="background-color: white;">
+                            <h1 style="">
+                                <img class="card-img-top" style="height: 300px; margin-top: 20px; margin-left:23%;" src="<?php echo base_url('../upload/'. $s['service_logo']);?>">
+                                <br/>
+                                <div class="card-body">
+
+
+                                        <h5 class="card-title" style="margin-left: 25%"> <font size="6"> <b><?php echo $s['service_name']?></b></h5>
+
+                                        <p  class="card-text" style="margin-left: 25%; margin-top: -5%"><font size="3"><?php echo $s['service_description']?><p>
+                                        
+                                    <a href="<?php echo base_url('ServiceController/service_profile')?>" class="btn btn-primary">Edit</a>
+                                    <a href="<?php echo base_url('CategoryController/menu')?>/<?php echo $s['id']?>" class="btn btn-success">View menu</a> | <a href="<?php echo base_url('ServiceController/delete_service')?>/<?php echo $s['id']?>" class="btn btn-danger">Delete</a>
+                                </div>
+                        </div>
+                      </div>
+                   
+              
+
+
+        
             <br/>
             <?php endif; ?>   
             <?php endif; ?> 
             <?php endif; ?> 
             <?php endforeach; ?>   
             <?php endforeach; ?>
+     </div>
+</div>
      <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->

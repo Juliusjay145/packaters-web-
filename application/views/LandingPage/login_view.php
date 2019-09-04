@@ -1,8 +1,9 @@
-<section id="services">
+<div id="redbg2" class="redbg2" style="height: 100%"> 
+<section id="services" >
       <div class="container">
         <div class="section-header">
-          <h2>Login</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <h2 style="color:white">Login</h2>
+          <p style="color:white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
         </div>
 
         <div class="row">
@@ -33,3 +34,4 @@
 
       </div>
     </section><!-- #services -->
+  </div>
