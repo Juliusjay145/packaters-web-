@@ -3,7 +3,7 @@
       <div class="container">
         <div class="section-header">
           <h2 style="color:white">Login</h2>
-          <p style="color:white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <p style="color:white; font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla. malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
         </div>
 
         <div class="row">
@@ -15,7 +15,7 @@
               <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla.</p>
               <br/>
               <center>
-                <a href="<?php echo base_url('CustomerController/login_view')?>" class="btn btn-primary">Login as Customer</a>
+                <a href="<?php echo base_url('CustomerController/login_view')?>" class="btn btn-primary" style="font-size: 15px;">Login as Customer</a>
               </center>  
             </div>
           </div>
@@ -27,7 +27,7 @@
               <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt fugiat culpa esse aute nulla.</p>
               <br/>
               <center>
-                <a href="<?php echo base_url('CateringController/login_view')?>" class="btn btn-primary">Login as Catering Provider</a>
+                <a href="<?php echo base_url('CateringController/login_view')?>" class="btn btn-primary" style="font-size: 15px;">Login as Catering Provider</a>
               </center>
             </div>
           </div>

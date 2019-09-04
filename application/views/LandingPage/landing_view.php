@@ -28,7 +28,7 @@
     <div class="container">
 
       <div class="hero-banner">
-        <img src="<?php echo base_url('../bootstrap/img/icon.png')?>" alt="" class="img-fluid">
+        <img src="<?php echo base_url('../bootstrap/img/icon.png')?>"  style="margin-top: 200px; height: 100%; width: 80%; margin-left: 100px" class="img-fluid">
       </div>
 
       <div class="hero-content">

@@ -1308,6 +1308,167 @@ input::-webkit-input-placeholder {
  background: #FF5F6D;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
 }
+
+/*cards >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+  /* Coded with love by Mutiullah Samim */
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100px
+      background: #FF916F !important;
+    }
+    .user_card {
+      height: 550px;
+      width: 500px;
+      margin-top: auto;
+      margin-bottom: auto;
+      background: #ED213A;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 5px;
+
+    }
+
+
+    .brand_logo_container {
+      position: absolute;
+      height: 250px;
+      width: 250px;
+      top: -75px;
+      border-radius: 50%;
+      background: #FF916F;
+      padding: 10px;
+      text-align: center;
+    }
+    .brand_logo {
+      height: 650px;
+      width: 650px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+    .form_container {
+      margin-top: 100px;
+    }
+    .login_btn {
+      width: 100%;
+      background: #c0392b !important;
+      color: white !important;
+    }
+    .login_btn:focus {
+      box-shadow: none !important;
+      outline: 0px !important;
+    }
+    .login_container {
+      padding: 0 2rem;
+    }
+    .input-group-text {
+      background: #c0392b !important;
+      color: white !important;
+      border: 0 !important;
+
+      border-radius: 0.25rem 0 0 0.25rem !important;
+    }
+    .input_user,
+    .input_pass:focus {
+      box-shadow: none !important;
+      outline: 0px !important;
+    }
+    .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+      background-color: #c0392b !important;
+    }
+
+
+
+
+
+
+
+
+
+    .user_cardgold {
+      height: 900px;
+      width: 500px;
+      margin-top: auto;
+      margin-bottom: auto;
+      background: #FF8008;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 5px;
+    }
+
+
+
+/*Register cards>>>>>>>>>>>>>>>>>>>*/
+    .user_cardplat{
+      height: 900px;
+      width: 500px;
+      margin-top: auto;
+      margin-bottom: auto;
+     background: #bdc3c7;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 5px;
+    }
+
+
+     .user_cardpremium{
+      height: 900px;
+      width: 500px;
+      margin-top: auto;
+      margin-bottom: auto;
+    background: #c21500;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffc500, #c21500);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 5px;
+    }
+
+    /*endcards>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
