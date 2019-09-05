@@ -1,4 +1,4 @@
-<div id="login redbg2" class="redbg2" style="height: 150%; margin-top: -30px">
+<div id="login redbg2" class="redbg2" style="height: 170%; margin-top: -30px">
         <h3 class="text-center text-white pt-5"></h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
@@ -15,7 +15,7 @@
 <body>
     <div class="container h-100" style="margin-top: 100px">
         <div class="d-flex justify-content-center h-100">
-            <div class="user_cardgold" style="margin-top: 10px">
+            <div class="user_carddiamond" style="margin-top: 10px">
                 <div class="d-flex justify-content-center">
                     <div class="brand_logo_container">
                         <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" alt="" class="img-fluid" style="width: 400px;margin-left: 10px; margin-top: -20%">
@@ -26,46 +26,46 @@
                 <div class="d-flex justify-content-center form_container">
                     <!-- forms -->
                     <form id="login-form" class="form" action="<?php echo base_url('CateringController/add_register')?>" method="post">
-                            <h3 class="text-center textcolor" style="margin-top: 80px;">Gold Catering Provider Register</h3>
+                            <h3 class="text-center textcolor">Diamond Catering Provider Registration</h3>
 
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%;">
                                 <label for="username" class="textcolor" style="font-size: 15px">First Name:</label><br>
-                                <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="name" class="form-control">
+                                <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="name" class="form-control" autofocus>
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="username" class="textcolor" style="font-size: 15px">Address:</label><br>
                                 <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="address" class="form-control">
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="username" class="textcolor" style="font-size: 15px">Phone Number:</label><br>
                                 <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="number" class="form-control">
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="username" class="textcolor" style="font-size: 15px">Catering Details:</label><br>
                                 <textarea name="details"  style="height: 40px; width: 100%; font-size: 15px" class="form-control" width="10%" height="20%"></textarea>
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="username" class="textcolor" style="font-size: 15px">Catering Logo:</label><br>
                                 <input type="file"  style="height: 40px; width: 100%; font-size: 15px" name="logo" class="form-control">
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="username" class="textcolor" style="font-size: 15px">Username:</label><br>
                                 <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="username" class="form-control">
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="password" class="textcolor" style="font-size: 15px">Password:</label><br>
                                 <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="password" class="form-control">
                             </div>
 
 
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                             <div class="form-group">
                                 <input type="submit" style="width: 100%; height: 40px; font-size: 15px; margin-top: 15px" name="submit" class="btn btn-primary btn-lg btn3d" value="Register">
                             </div>
 
                             <div class="mt-4">
                                 <div class="d-flex justify-content-center links textcolor" id="register-link" style="font-size: 15px">
-                                    Don't have an account? <a href="<?php echo base_url('LandingPageController/register')?>" class="textcolor">&nbsp;Register here</a>
+                                   Login now!? <a href="<?php echo base_url('LandingPageController/subscription')?>" class="textcolor">&nbsp;Click here!</a>
                                 </div>
                             </div>
                         </form>

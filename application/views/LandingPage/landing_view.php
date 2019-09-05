@@ -4,7 +4,7 @@
 
       <div id="logo" class="pull-left">
         <h1><a href="#body" class="scrollto"><div class="hero-banner" >
-        <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 20%;height: 85px; width: 80px; margin-top: -15px; margin-bottom: -20px " alt="" class="img-fluid">
+        <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 20%; height: 70px; width: 70px; margin-top: -30px; margin-bottom: -20px " alt="" class="img-fluid">
 
 
 
@@ -14,9 +14,9 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="index.html">Home</a></li>
-          <li><a href="about">About Us</a></li>
-          <li><a href="services">Services</a></li>
+          <li class="menu-active"><a href="index.html" style="margin-right: 770px; color: #AE242B">Home</a></li>
+          <li><a href="about" style="margin-left: -765px; color: #AE242B">About Us</a></li>
+          <li><a href="services" style="margin-left: -690px; color: #AE242B">Services</a></li>
           <li><a href="<?php echo base_url('LandingPageController/login')?>">Login</a></li>
           <li><a href="<?php echo base_url('LandingPageController/register')?>">Register</a></li>
         </ul>

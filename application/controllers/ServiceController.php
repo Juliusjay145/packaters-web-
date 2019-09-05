@@ -81,7 +81,7 @@
     
 
                           $this->ServiceModel->insert($add);
-                          $this->_displayAlert('Service Added Successfully','ServiceController/service');
+                          $this->_displayAlert('Service Added Successfully','ServiceController/listservice');
         }
 
 
@@ -96,7 +96,7 @@
                 );
 
             $this->ServiceModel->update($add);
-            $this->_displayAlert('Account has been updated','ServiceController/service');
+            $this->_displayAlert('Account has been updated','ServiceController/listservice');
         }
 
 
@@ -112,7 +112,7 @@
             );
 
             $this->ServiceModel->delete($data, $id);
-            $this->_displayAlert('Service Delete','ServiceController/service', $data);
+            $this->_displayAlert('Service Delete','ServiceController/listservice', $data);
         }
 
         public function _displayAlert($message,$cont){

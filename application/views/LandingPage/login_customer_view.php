@@ -26,10 +26,10 @@
                 <div class="d-flex justify-content-center form_container">
                     <!-- forms -->
                     <form id="login-form" class="form" action="<?php echo base_url('CustomerController/login')?>" method="post">
-                            <h3 class="text-center textcolor" style="margin-top: -10px;">Login Customer</h3>
+                            <h3 class="text-center textcolor" style="margin-top: 60px;">Login Customer</h3>
                             <div class="form-group" style="width: 150%; margin-left: -25%">
                                 <label for="username" class="textcolor" style=" font-size: 15px">Username:</label><br>
-                                <input type="text" style="height: 40px; width: 100%;" name="username" class="form-control">
+                                <input type="text" style="height: 40px; width: 100%;" name="username" class="form-control" autofocus>
                             </div>
                             <div class="form-group" style="width: 150%; margin-left: -25%">
                                 <label for="password" class="textcolor" style=" font-size: 15px">Password:</label><br>
@@ -38,7 +38,7 @@
 
 
                             <div class="form-group" style="width: 150%; margin-left: -25%">
-                                <label for="remember-me" class="textcolor"><span style=" font-size: 10px">Remember me</span> 
+                                <label for="remember-me" class="textcolor w3-right"><span style=" font-size: 10px">Remember me</span> 
                                     <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
                                 <input type="submit" name="submit" style="width: 100%; height: 40px; font-size: 15px" class="btn btn-info btn-md" value="Login">
                             </div>

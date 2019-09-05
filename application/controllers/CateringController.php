@@ -130,13 +130,14 @@
                 'password' => $this->input->post('password'),
                 "logo"=> $image,
                 "path_image"=> $path,
-                "status" => "Gold",
+                "status" => "Diamond",
                 "lat" => "10.2971383",
                 "longitude" => "123.8971083"
                         
        		);
                 $this->CateringModel->insert($add);
-                $this->_displayAlert('Register Successfully','CateringController/login_view');
+                $this->_displayAlert('CateringController/login_view');
+                //return('CateringController/login_view');
                 //$this->_displayAlert('Account Inerted','PestControl/index');
 		}
 
@@ -169,7 +170,8 @@
                         
        		);
                 $this->CateringModel->insert($add);
-                $this->_displayAlert('Register Successfully','CateringController/login_view');
+                $this->_displayAlert('CateringController/login_view');
+                //$this->_displayAlert('Register Successfully','CateringController/login_view');
                 //$this->_displayAlert('Account Inerted','PestControl/index');
 		}
 
@@ -204,7 +206,8 @@
                         
        		);
                 $this->CateringModel->insert($add);
-                $this->_displayAlert('Register Successfully','CateringController/login_view');
+                $this->_displayAlert('CateringController/login_view');
+                //$this->_displayAlert('Register Successfully','CateringController/login_view');
                 //$this->_displayAlert('Account Inerted','PestControl/index');
 		}
 
@@ -234,14 +237,14 @@
 					 if($result[0]['active']=='Active'){
 	                    
 	                    if($result[0]['user_type']=='catering'){
-	                    $this->_displayAlert('Login Successfully','CateringController/home');
+	                    $this->_displayAlert('CateringController/home');
 	                    
 	                    }
 
 	                }
 
 	                else{
-	                    $this->_displayAlert('Please contact the admin to update your status','Clients/valid');
+	                    $this->_displayAlert2('Please contact the admin to update your status','Clients/valid');
 	                } 
 	        }
 	    }
@@ -268,7 +271,7 @@
 	            );
 
 	        $this->CateringModel->update($add);
-	        $this->_displayAlert('Account has been updated','CateringController/home');
+	        //$this->_displayAlert('Account has been updated','CateringController/home');
 	    }
 
 	    public function logout()
@@ -277,7 +280,11 @@
 			redirect(base_url('CateringController/index'));
 		}
 	    
-	    public function _displayAlert($message,$cont){
+	    public function _displayAlert($cont){
+      		echo "<script>window.location='".base_url()."$cont';</script>";
+    	}
+
+    	public function _displayAlert2($cont){
       		echo "<script>alert('$message');window.location='".base_url()."$cont';</script>";
     	}            
 

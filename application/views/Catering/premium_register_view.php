@@ -1,4 +1,4 @@
-<div id="login redbg2" class="redbg2" style="height: 150%; margin-top: -30px">
+<div id="login redbg2" class="redbg2" style="height: 170%; margin-top: -30px">
         <h3 class="text-center text-white pt-5"></h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
@@ -26,39 +26,39 @@
                 <div class="d-flex justify-content-center form_container">
                     <!-- forms -->
                     <form id="login-form" class="form" action="<?php echo base_url('CateringController/add_register_premium')?>" method="post">
-                            <h3 class="text-center textcolor" style="margin-top: 80px;">Premium Catering Provider Register</h3>
+                            <h3 class="text-center textcolor">Premium Catering Provider Register</h3>
 
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%;">
                                 <label for="username" class="textcolor" style="font-size: 15px">First Name:</label><br>
-                                <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="name" class="form-control">
+                                <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="name" class="form-control" autofocus>
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="username" class="textcolor" style="font-size: 15px">Address:</label><br>
                                 <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="address" class="form-control">
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="username" class="textcolor" style="font-size: 15px">Phone Number:</label><br>
                                 <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="number" class="form-control">
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="username" class="textcolor" style="font-size: 15px">Catering Details:</label><br>
                                 <textarea name="details"  style="height: 40px; width: 100%; font-size: 15px" class="form-control" width="10%" height="20%"></textarea>
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="username" class="textcolor" style="font-size: 15px">Catering Logo:</label><br>
                                 <input type="file"  style="height: 40px; width: 100%; font-size: 15px" name="logo" class="form-control">
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="username" class="textcolor" style="font-size: 15px">Username:</label><br>
                                 <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="username" class="form-control">
                             </div>
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="password" class="textcolor" style="font-size: 15px">Password:</label><br>
                                 <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="password" class="form-control">
                             </div>
 
 
-                            <div class="form-group" style="width: 150%; margin-left: -25%">
+                            <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                             <div class="form-group">
                                 <input type="submit" style="width: 100%; height: 40px; font-size: 15px; margin-top: 15px" name="submit" class="btn btn-primary btn-lg btn3d" value="Register">
                             </div>

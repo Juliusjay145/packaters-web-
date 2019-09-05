@@ -78,23 +78,23 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
-                    <li>
+                   <li>
                         <a href="<?php echo base_url('CateringController/home')?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="ui-elements.html" class="active-menu"><i class="fa fa-desktop"></i> Service</a>
+                        <a href="<?php echo base_url('ServiceController/service')?>" class="active-menu" ><i class="fa fa-desktop"></i>Add Service</a>
                     </li>
                     <li>
-                        <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Transaction</a>
+                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-sitemap"></i> Category<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Add Menu</a>
-                            </li>
-                            <li>
-                                <a href="#">List of Menu</a>
+                                <a href="<?php echo base_url('ServiceController/listservice')?>">List of Service</a>
                             </li>
                         </ul>
                     </li>

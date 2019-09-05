@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Insight Free Bootstrap Admin Template</title>
+    <title>Packaters</title>
     <!-- Bootstrap Styles-->
     <link href="<?php echo base_url('../bootstrapV3/css/bootstrap.css')?>" rel="stylesheet" />
     <!-- FontAwesome Styles-->
