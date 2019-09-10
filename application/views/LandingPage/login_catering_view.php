@@ -29,11 +29,11 @@
                             <h3 class="text-center textcolor" style="margin-top: 60px;">Login Catering Provider</h3>
                             <div class="form-group" style="width: 150%; margin-left: -25%">
                                 <label for="username" class="textcolor" style=" font-size: 15px">Username:</label><br>
-                                <input type="text" style="height: 40px; width: 100%;" name="username" class="form-control" autofocus=>
+                                <input type="text" style="height: 40px; width: 100%; font-size: 15px" name="username" class="form-control" autofocus=>
                             </div>
                             <div class="form-group" style="width: 150%; margin-left: -25%">
                                 <label for="password" class="textcolor" style=" font-size: 15px">Password:</label><br>
-                                <input type="password" style="height: 40px" name="password" class="form-control">
+                                <input type="password" style="height: 40px; font-size: 15px" name="password" class="form-control">
                             </div>
 
 

@@ -30,12 +30,14 @@
                     
                  ?>
 
-                <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 10px; height: 50px; width: 50px; margin-top: -30px; margin-bottom: -70px " alt="" class="img-fluid">
+               
+                <a class="navbar-brand" href="index.html">
+                    <b><?php echo $c['cat_name']; ?>
+                     <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 20px; height: 50px; width: 50px; margin-top: -135px; margin-bottom: -70px " alt="" class="img-fluid">
 
-                <a href="index.html"><h2 style="margin-left: 300px; margin-top: -10px"><?php echo $c['cat_name']; ?></h2>
                 <?php endif; ?>
                 <?php endforeach; ?></a>
-            
+            </a>    
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
@@ -253,24 +255,28 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="<?php echo base_url('CateringController/home')?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('ServiceController/service')?>"><i class="fa fa-desktop"></i> Add Service</a>
-                    </li>
-					<li>
-                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i>Transaction <span class="badge badge-primary"><?php echo $customer; ?></span></a>
+                        <a href="<?php echo base_url('ServiceController/service')?>" ><i class="fa fa-desktop"></i>Add Service</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback <span class="badge badge-primary"><?php echo $comments ?></span></a>
+                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction</a>
                     </li>
-
-
                     <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> My Service<span class="fa arrow"></span></a>
+                        <a href="<?php echo base_url('CateringController/transaction_completed')?>"><i class="fa fa-bar-chart-o"></i> Confirmed Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CateringController/transaction_reports')?>"><i class="fa fa-bar-chart-o"></i> Reports Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i> Category<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo base_url('ServiceController/listservice')?>">List of Services</a>
+                                <a href="<?php echo base_url('ServiceController/listservice')?>" class="active-menu">List of Service</a>
                             </li>
                         </ul>
                     </li>

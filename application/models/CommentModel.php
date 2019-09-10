@@ -30,6 +30,12 @@
 			return $this->db->update($this->table, $data);
 		}
 
+		public function delete($data, $id)
+		{
+			$this->db->where('pack_comment_id', $id);
+			return $this->db->update($this->table, $data);
+		}
+
 	}
 
 

@@ -33,6 +33,18 @@
 			return $this->db->update($this->table, $data);
 		}
 
+		public function delete($data, $id)
+		{
+			$this->db->where('id', $id);
+			return $this->db->update($this->table, $data);
+		}
+
+		public function get_menu_id($sid)
+		{
+			$query = $this->db->get_where('pack_service_menu', array('id' => $sid));
+			return $query->result_array();
+		}
+
 
 
 

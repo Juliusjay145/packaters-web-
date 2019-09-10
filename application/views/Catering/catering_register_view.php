@@ -48,6 +48,10 @@
                                 <label for="username" class="textcolor" style="font-size: 15px">Catering Logo:</label><br>
                                 <input type="file"  style="height: 40px; width: 100%; font-size: 15px" name="logo" class="form-control">
                             </div>
+                             <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
+                                <label for="username" class="textcolor" style="font-size: 15px">Catering Permit:</label><br>
+                                <input type="file"  style="height: 40px; width: 100%; font-size: 15px" name="permit" class="form-control">
+                            </div>
                             <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="username" class="textcolor" style="font-size: 15px">Username:</label><br>
                                 <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="username" class="form-control">
@@ -65,7 +69,7 @@
 
                             <div class="mt-4">
                                 <div class="d-flex justify-content-center links textcolor" id="register-link" style="font-size: 15px">
-                                   Login now!? <a href="<?php echo base_url('LandingPageController/subscription')?>" class="textcolor">&nbsp;Click here!</a>
+                                   Let me Login <a href="<?php echo base_url('LandingPageController/subscription')?>" class="textcolor">&nbsp;Click here!</a>
                                 </div>
                             </div>
                         </form>

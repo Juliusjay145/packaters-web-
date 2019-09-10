@@ -8,6 +8,9 @@
 ?>
 
 
+
+
+
 <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
@@ -17,7 +20,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><b>Pa</b>ckaters</a>
+                <?php foreach($cater as $c): ?>
+                 
+                 <?php
+                    if($this->session->userdata('username') == $c['username']):
+                    
+                        $c['cat_name'];
+                        //$id = $pestcontrol['pestcontrol_id'];
+                    
+                 ?>
+
+                
+                <a class="navbar-brand" href="index.html"><b><?php echo $c['cat_name']; ?>
+                <?php endif; ?>    
+                <?php endforeach; ?>    
+            </a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -207,7 +224,7 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="<?php echo base_url('CateringController/profile')?>"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
@@ -226,13 +243,30 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="<?php echo base_url('CateringController/home')?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('AdminController/get_customer')?>"><i class="fa fa-desktop"></i> Client</a>
+                        <a href="<?php echo base_url('ServiceController/service')?>" ><i class="fa fa-desktop"></i>Add Service</a>
                     </li>
-                     <li>
-                        <a href="<?php echo base_url('AdminController/get_client')?>"><i class="fa fa-desktop"></i> Mobile Customers</a>
+                    <li>
+                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CateringController/transaction_completed')?>"><i class="fa fa-bar-chart-o"></i> Confirmed Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CateringController/transaction_reports')?>"><i class="fa fa-bar-chart-o"></i> Reports Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i> Category<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="<?php echo base_url('ServiceController/listservice')?>" class="active-menu">List of Service</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
 
@@ -247,13 +281,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            Dashboard <small>Summary of your App</small>
+                            Transaction <small>Summary of your App</small>
                         </h1>
-						<ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Library</a></li>
-                            <li class="active">Data</li>
-                        </ol>
                     </div>
                 </div>
 				
@@ -261,55 +290,50 @@
                 <!-- /. ROW  -->
 
                 <div class="row">
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-green green">
-                            <div class="panel-left pull-left green">
-                                <i class="fa fa-bar-chart-o fa-5x"></i>
-                                
-                            </div>
-                            <div class="panel-right pull-right">
-								<h3>0</h3>
-                               <strong> Service</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-blue blue">
-                              <div class="panel-left pull-left blue">
-                                <i class="fa fa-shopping-cart fa-5x"></i>
-								</div>
-                                
-                            <div class="panel-right pull-right">
-							<h3>0</h3>
-                               <strong> Completed Transaction</strong>
+                    <table class="table table-striped custab">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Package Service</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                        </thead>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-red red">
-                            <div class="panel-left pull-left red">
-                                <i class="fa fa fa-comments fa-5x"></i>
-                               
-                            </div>
-                            <div class="panel-right pull-right">
-							 <h3>0</h3>
-                               <strong> Confirmed Request </strong>
+                            <?php foreach($book as $b): ?>
+                            <?php foreach($cater as $c): ?>
+                            
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-brown brown">
-                            <div class="panel-left pull-left brown">
-                                <i class="fa fa-users fa-5x"></i>
+                                <?php  
+
+                                if($b['pack_caterer_id'] == $c['id']):
                                 
-                            </div>
-                            <div class="panel-right pull-right">
-							<h3>0</h3>
-                             <strong>Canceled Transaction</strong>
+                                if($b['status'] == "Confirm" || $b['status'] == "Paid"):
 
-                            </div>
+                                    if($c['username'] == $this->session->userdata('username')):
+                                    
+                                        
+
+            
+                                                                                    
+                                    ?> 
+
+                                <tr>
+                                    <td><?php echo $b['customer_fname']?></td>
+                                    <td><?php echo $b['pack_address']?></td>
+                                    <td><?php echo $b['package_name']?></td>
+                                    <td><?php echo $b['price']?></td>
+                                    <td><?php echo $b['status']?></td>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="<?php echo base_url('CateringController/completed')?>/<?php echo $b['pack_transaction_id']; ?>"><span class="glyphicon glyphicon-edit"></span> Completed</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Cancel</a></td>
+                                </tr>
+                            <?php endif; ?>
+                            <?php endif; ?>
+                            <?php endif; ?>
+                            <?php endforeach; ?>
+                            <?php endforeach; ?>
+                        </table>
                         </div>
                     </div>
                 </div>

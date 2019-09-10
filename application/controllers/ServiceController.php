@@ -29,9 +29,9 @@
 
         }
 
-        public function service_profile()
+        public function service_profile($sid)
         {
-            $data['service'] = $this->ServiceModel->get_service();
+            $data['service'] = $this->ServiceModel->get_service_id($sid);
             $data['catering'] = $this->CateringModel->get_catering();
             $this->load->view('headerV2/header_view');
             $this->load->view('Service/service_profile_view', $data);
@@ -81,7 +81,7 @@
     
 
                           $this->ServiceModel->insert($add);
-                          $this->_displayAlert('Service Added Successfully','ServiceController/listservice');
+                          redirect(base_url('ServiceController/listservice'));
         }
 
 
@@ -96,7 +96,7 @@
                 );
 
             $this->ServiceModel->update($add);
-            $this->_displayAlert('Account has been updated','ServiceController/listservice');
+            redirect(base_url('ServiceController/listservice'));
         }
 
 
@@ -112,7 +112,8 @@
             );
 
             $this->ServiceModel->delete($data, $id);
-            $this->_displayAlert('Service Delete','ServiceController/listservice', $data);
+            redirect(base_url('ServiceController/listservice'));
+            // header('location:ServiceController/service');
         }
 
         public function _displayAlert($message,$cont){

@@ -33,6 +33,12 @@
 			return $query->row()->customer;
 		}
 
+		public function count_completed()
+		{
+			$query = $this->db->query('SELECT COUNT(pack_caterer_id) as catering FROM pack_transaction');
+			return $query->row()->catering;
+		}
+
 		public function updatenotification($data){
 			return $this->db->update($this->table, $data);
 		}
@@ -42,6 +48,11 @@
 			$this->db->where('pack_transaction_id', $id);
 			return $this->db->update($this->table, $data);
 		}
+
+		public function confirm($data, $id){
+			$this->db->where('pack_transaction_id', $id);
+			return $this->db->update($this->table, $data);
+		}	
 
 
 

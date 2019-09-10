@@ -16,7 +16,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><b>Pa</b>ckaters</a>
+                <?php foreach($catering as $c): ?>
+                 
+                 <?php
+                    if($this->session->userdata('username') == $c['username']):
+                    
+                        $c['cat_name'];
+                        //$id = $pestcontrol['pestcontrol_id'];
+                 ?>
+
+                
+                <a class="navbar-brand" href="index.html"><b><?php echo $c['cat_name']; ?>
+                <?php endif ?>
+                <?php endforeach; ?>
+            </a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -69,19 +82,25 @@
                         <a href="<?php echo base_url('CateringController/home')?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="ui-elements.html" class="active-menu"><i class="fa fa-desktop"></i> Service</a>
+                        <a href="<?php echo base_url('ServiceController/service')?>" ><i class="fa fa-desktop"></i>Add Service</a>
                     </li>
                     <li>
-                        <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Transaction</a>
+                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CateringController/transaction_completed')?>"><i class="fa fa-bar-chart-o"></i> Confirmed Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CateringController/transaction_reports')?>"><i class="fa fa-bar-chart-o"></i> Reports Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-sitemap"></i> Category<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">Add Menu</a>
-                            </li>
-                            <li>
-                                <a href="#">List of Menu</a>
+                                <a href="<?php echo base_url('ServiceController/listservice')?>" class="active-menu">List of Service</a>
                             </li>
                         </ul>
                     </li>
@@ -103,7 +122,13 @@
                 <?php  foreach($menu as $m): ?> 
                     <?php  
                                     
-                            if($s['id'] == $m['service_id']):?>
+                            if($s['id'] == $m['service_id']):
+                                
+                                if($m['status'] == "Active"):
+
+
+
+                                ?>
 
            <div class="row">
               <div class="col-sm-6">
@@ -113,13 +138,14 @@
                   <div class="card-body">
                     <h5 class="card-title"><b><?php echo $m['menu_name']?></b></h5>
                     <p class="card-text"><?php echo $m['menu_description']?></p>
-                    <a href="<?php echo base_url('CategoryController/menu_profile')?>" class="btn btn-primary">Edit</a>
-                    | <a href="<?php echo base_url('ServiceController/delete_service')?>/<?php echo $s['id']?>" class="btn btn-danger">Delete</a>
+                    <a href="<?php echo base_url('CategoryController/menu_profile')?>/<?php echo $m['id']?>" class="btn btn-primary">Edit</a>
+                    | <a href="<?php echo base_url('CategoryController/delete')?>/<?php echo $m['id']?>" class="btn btn-danger">Delete</a>
                   </div>
                 </div>
               </div>
             </div>
             <br/>
+            <?php endif; ?>
             <?php endif; ?>
             <?php endforeach; ?>   
             <?php endforeach; ?>

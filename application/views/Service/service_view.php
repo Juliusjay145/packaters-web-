@@ -7,6 +7,20 @@
 
 ?>
 
+<style>
+    p.double 
+    {
+        box-shadow:0 0 0 1px #31c300 inset, 
+        0 0 0 2px rgba(255,255,255,0.15) 
+        inset, 0 8px 0 0 #5eb924, 0 8px 8px 1px rgba(0,0,0,0.5);
+        background-color:#78d739;
+        width: 100px;
+        color: white;
+    }
+    .btn-glyphicon { padding:4px; margin-top: 4px; background:#ffffff; margin-right:4px; }
+.icon-btn { padding: 1px 15px 3px 2px; border-radius:50px;}
+</style>
+
 <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
@@ -78,14 +92,20 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
-                   <li>
+                    <li>
                         <a href="<?php echo base_url('CateringController/home')?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('ServiceController/service')?>" class="active-menu" ><i class="fa fa-desktop"></i>Add Service</a>
+                        <a href="<?php echo base_url('ServiceController/service')?>" ><i class="fa fa-desktop"></i>Add Service</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CateringController/transaction_completed')?>"><i class="fa fa-bar-chart-o"></i> Confirmed Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CateringController/transaction_reports')?>"><i class="fa fa-bar-chart-o"></i> Reports Transaction</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback</a>
@@ -94,7 +114,7 @@
                         <a href="#"><i class="fa fa-sitemap"></i> Category<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo base_url('ServiceController/listservice')?>">List of Service</a>
+                                <a href="<?php echo base_url('ServiceController/listservice')?>" class="active-menu">List of Service</a>
                             </li>
                         </ul>
                     </li>
@@ -130,7 +150,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label>File input</label>
-                                            <input type="file" name="logo" class="form-control"><br/> Choose file to upload
+                                                <input type="file" name="logo" class="form-control btn btn-success btn-lg btn3d"><br/> 
+                                                <p class="double" style="height: 30px" class="btn btn-success btn-lg btn3d">
+                                                    <h6 style="margin-top: -40px; margin-left: 10px; width: 200px; ">
+                                                        <b style="color: white; margin-top: 10px; height: 100px;">Choose file  <span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span></b></h6>
+                                                </p>
                                         </div>
                                         <div class="form-group">
                                             <label>Service Description</label>

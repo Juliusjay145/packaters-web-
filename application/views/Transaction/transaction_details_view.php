@@ -252,6 +252,12 @@
                         <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction</a>
                     </li>
                     <li>
+                        <a href="<?php echo base_url('CateringController/transaction_completed')?>"><i class="fa fa-bar-chart-o"></i> Confirmed Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CateringController/transaction_reports')?>"><i class="fa fa-bar-chart-o"></i> Reports Transaction</a>
+                    </li>
+                    <li>
                         <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback</a>
                     </li>
                     <li>
@@ -291,6 +297,7 @@
                                 <th>Address</th>
                                 <th>Package Service</th>
                                 <th>Price</th>
+                                <th>Status</th>
                                 <th class="text-center">Action</th>
                             </tr>
                         </thead>
@@ -303,6 +310,8 @@
 
                                 if($b['pack_caterer_id'] == $c['id']):
 
+                                     if($b['status'] == "Pending"):
+
                                     if($c['username'] == $this->session->userdata('username')):
                                     
                                         
@@ -312,12 +321,14 @@
                                     ?> 
 
                                 <tr>
-                                    <td><?php echo $b['customer_fname']?></td>
+                                    <td><?php echo $b['customer_fname']?> <?php echo $b['customer_lname']?></td>
                                     <td><?php echo $b['pack_address']?></td>
                                     <td><?php echo $b['package_name']?></td>
                                     <td><?php echo $b['price']?></td>
-                                    <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Confirm</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+                                    <td><?php echo $b['status']?></td>
+                                <td class="text-center"><a class='btn btn-info btn-xs' href="<?php echo base_url('CateringController/confirm')?>/<?php echo $b['pack_transaction_id']; ?>"><span class="glyphicon glyphicon-edit"></span> Confirm</a> <a href="<?php echo base_url('CateringController/cancel')?>/<?php echo $b['pack_transaction_id']; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Cancel</a></td>
                                 </tr>
+                            <?php endif; ?>
                             <?php endif; ?>
                             <?php endif; ?>
                             <?php endforeach; ?>

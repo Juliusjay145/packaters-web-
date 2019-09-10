@@ -34,7 +34,7 @@
 
 		public function count_catering_service()
 		{
-			$query = $this->db->query('SELECT COUNT(id) as catering FROM pack_service');
+			$query = $this->db->query('SELECT COUNT(pack_caterer_id) as catering FROM pack_service');
 			return $query->row()->catering;
 		}
 

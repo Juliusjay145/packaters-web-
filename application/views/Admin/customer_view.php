@@ -232,10 +232,10 @@
                         <a href="<?php echo base_url('AdminController/home')?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('AdminController/get_customer')?>"><i class="fa fa-desktop"></i> Customer</a>
+                        <a href="<?php echo base_url('AdminController/get_customer')?>"><i class="fa fa-desktop"></i> Client</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('AdminController/get_client')?>"><i class="fa fa-desktop"></i> Client</a>
+                        <a href="<?php echo base_url('AdminController/get_client')?>"><i class="fa fa-desktop"></i> Mobile Customers</a>
                     </li>
 					
                 </ul>
@@ -271,7 +271,7 @@
                         <?php foreach($customer as $c): ?>
                                 <tr>
                                     <td><?php echo $c['cat_name']?></td>
-                                    <td class="text-center"><a href="<?php echo base_url('AdminController/deactivate')?>/<?php echo $c['id']; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> <?php echo $c['active'];?></a></td>
+                                    <td class="text-center"><a href="<?php echo base_url('AdminController/deactivate')?>/<?php echo $c['id']; ?>" class="btn btn-danger btn-lg btn3d"><span class="glyphicon glyphicon-remove"></span> <?php echo $c['active'];?></a></td>
                                 </tr>
           
                             <?php endforeach; ?>

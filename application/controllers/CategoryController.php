@@ -17,6 +17,7 @@
         public function category($sid)
         {
             $data['getpest'] = $this->ServiceModel->get_service_id($sid);
+            $data['catering'] = $this->CateringModel->get_catering();
             $this->load->view('headerV2/header_view');
             $this->load->view('Category/category_view', $data);
             $this->load->view('headerV2/footer_view');
@@ -25,15 +26,17 @@
         public function menu($id)
         {
             $data['service'] = $this->ServiceModel->get_service2();
+            $data['catering'] = $this->CateringModel->get_catering();
             $data['menu'] = $this->CategoryModel->get_menu($id);
             $this->load->view('headerV2/header_view');
             $this->load->view('Menu/menu_service_view', $data);
             $this->load->view('headerV2/footer_view');
         }
 
-        public function menu_profile()
+        public function menu_profile($sid)
         {
-            $data['menu'] = $this->CategoryModel->get_menu2();
+            $data['menu'] = $this->CategoryModel->get_menu_id($sid);
+            $data['catering'] = $this->CateringModel->get_catering();
             $this->load->view('headerV2/header_view');
             $this->load->view('Menu/menu_service_profile_view', $data);
             $this->load->view('headerV2/footer_view');
@@ -73,7 +76,7 @@
 
 
                       $this->CategoryModel->insert($add);
-                      $this->_displayAlert('Account has been updated','ServiceController/service');
+                      redirect(base_url('ServiceController/listservice'));
         }
 
 
@@ -89,15 +92,32 @@
                 );
 
             $this->CategoryModel->update($add);
-            $this->_displayAlert('Account has been updated','ServiceController/service');
+            redirect(base_url('ServiceController/listservice'));
         }
 
+       public function delete() //sa client sa catering
+        {
+            $id = $this->uri->segment(3);
+            $data = array(
+
+                //'confirm' => 0,
+                'status' => 'Delete'
+
+                );
+            $this->CategoryModel->delete($data, $id);
+            redirect(base_url('ServiceController/service'));
+        }
 
 
 
         public function _displayAlert($message,$cont){
             echo "<script>alert('$message');window.location='".base_url()."$cont';</script>";
         }
+
+        public function _displayAlert2($cont){
+            echo "<script>window.location='".base_url()."$cont';</script>";
+        }
+
 
     }
 

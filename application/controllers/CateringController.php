@@ -48,6 +48,28 @@
 			$this->load->view('headerV2/footer_view');
 		}
 
+		public function transaction_completed()
+		{
+			$data['cater'] = $this->CateringModel->get_catering();
+			$data['customer'] = $this->CustomerModel->get_client2();
+			$data['book'] = $this->BookingModel->get_booking();
+			$data['catering'] = $this->ServiceModel->count_catering_service();
+			$this->load->view('headerV2/header_view');
+			$this->load->view('Transaction/completed_details_view', $data);
+			$this->load->view('headerV2/footer_view');
+		}
+
+		public function transaction_reports()
+		{
+			$data['cater'] = $this->CateringModel->get_catering();
+			$data['customer'] = $this->CustomerModel->get_client2();
+			$data['book'] = $this->BookingModel->get_booking();
+			$data['catering'] = $this->ServiceModel->count_catering_service();
+			$this->load->view('headerV2/header_view');
+			$this->load->view('Transaction/transaction_reports_view', $data);
+			$this->load->view('headerV2/footer_view');
+		}
+
 		public function profile($sid)
 		{
 			$data['cateringss'] = $this->CateringModel->get_catering_id($sid);
@@ -121,6 +143,9 @@
 			$image = $this->input->post('logo');
         	$path = "http://192.168.43.19/packaters/upload/". $image;
 
+        	$permit = $this->input->post('permit');
+        	$path2 = "http://192.168.43.19/packaters/upload/". $permit;
+
          	$add = array(
                 'cat_name' => $this->input->post('name'),
                 'cat_address' => $this->input->post('address'),
@@ -132,7 +157,8 @@
                 "path_image"=> $path,
                 "status" => "Diamond",
                 "lat" => "10.2971383",
-                "longitude" => "123.8971083"
+                "longitude" => "123.8971083",
+                "permit" => $path2
                         
        		);
                 $this->CateringModel->insert($add);
@@ -157,6 +183,9 @@
 			$image = $this->input->post('logo');
         	$path = "http://10.0.2.2/packaters/upload/". $image;
 
+        	$permit = $this->input->post('permit');
+        	$path2 = "http://192.168.43.19/packaters/upload/". $permit;
+
          	$add = array(
                 'cat_name' => $this->input->post('name'),
                 'cat_address' => $this->input->post('address'),
@@ -166,7 +195,8 @@
                 'password' => $this->input->post('password'),
                 "logo"=> $image,
                 "path_image"=> $path,
-                "status" => "Premium"
+                "status" => "Premium",
+                "permit" => $path2
                         
        		);
                 $this->CateringModel->insert($add);
@@ -191,6 +221,9 @@
 			$image = $this->input->post('logo');
         	$path = "http://10.0.2.2/packaters/upload/". $image;
 
+        	$permit = $this->input->post('permit');
+        	$path2 = "http://192.168.43.19/packaters/upload/". $permit;
+
          	$add = array(
                 'cat_name' => $this->input->post('name'),
                 'cat_address' => $this->input->post('address'),
@@ -202,13 +235,53 @@
                 "path_image"=> $path,
                 "status" => "Platinum",
                 "lat" => "10.2971383",
-                "longitude" => "123.8971083"
+                "longitude" => "123.8971083",
+                "permit" => $path
                         
        		);
                 $this->CateringModel->insert($add);
                 $this->_displayAlert('CateringController/login_view');
                 //$this->_displayAlert('Register Successfully','CateringController/login_view');
                 //$this->_displayAlert('Account Inerted','PestControl/index');
+		}
+
+		public function confirm() //sa client sa catering
+		{
+			$id = $this->uri->segment(3);
+	        $data = array(
+
+	            //'confirm' => 0,
+	            'status' => 'Confirm'
+
+	            );
+	        $this->BookingModel->updatecon($data, $id);
+	        redirect(base_url('CateringController/transaction_completed'));
+		}
+
+		public function completed() //sa client sa catering
+		{
+			$id = $this->uri->segment(3);
+	        $data = array(
+
+	            //'confirm' => 0,
+	            'status' => 'Completed'
+
+	            );
+	        $this->BookingModel->updatecon($data, $id);
+	        redirect(base_url('CateringController/transaction_reports'));
+		}
+
+		public function cancel() //sa client sa catering
+		{
+			$id = $this->uri->segment(3);
+	        $data = array(
+
+	            //'confirm' => 0,
+	            'status' => 'Cancel'
+
+	            );
+	        $this->BookingModel->updatecon($data, $id);
+	        redirect(base_url('CateringController/transaction_reports'));
 		}
 
 

@@ -14,11 +14,11 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="index.html" style="margin-right: 770px; color: #AE242B">Home</a></li>
-          <li><a href="about" style="margin-left: -765px; color: #AE242B">About Us</a></li>
-          <li><a href="services" style="margin-left: -690px; color: #AE242B">Services</a></li>
-          <li><a href="<?php echo base_url('LandingPageController/login')?>">Login</a></li>
-          <li><a href="<?php echo base_url('LandingPageController/register')?>">Register</a></li>
+          <li class="menu-active"><a href="#hero" style="margin-right: 770px; color: #AE242B">Home</a></li>
+          <li><a href="#about" style="margin-left: -765px; color: #AE242B">About Us</a></li>
+          <li><a href="#services" style="margin-left: -690px; color: #AE242B">Services</a></li>
+          <li><a href="<?php echo base_url('CateringController/login_view')?>">Login</a></li>
+          <li><a href="<?php echo base_url('CateringController/subscription')?>">Register</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

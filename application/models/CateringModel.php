@@ -92,7 +92,9 @@
 		public function deactivate($data, $id){
 			$this->db->where('id', $id);
 			return $this->db->update($this->table, $data);
-		}	
+		}
+
+		
 
 
 

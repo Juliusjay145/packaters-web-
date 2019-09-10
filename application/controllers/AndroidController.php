@@ -109,28 +109,26 @@
 			$this->BookingModel->insert($add);
 		}
 
-		// public function register_customer()
-		// {
-		// 	$add = array(
+		public function register_customer()
+		{
 
-		// 		$image = $this->input->post('picture');
-		// 		$path = "http://10.0.2.2/packaters/upload/". $image;
+			$image = $this->input->post('path_image');
+			$path = "http://10.0.2.2/packaters/upload/". $image;
 
+			$add = array(
 
-		// 		'cust_name' => $this->input->post('package_name'),
-		// 		'cust_lastname' => $this->input->post('package_address'),
-		// 		'cust_phonenum' => $this->input->post('p_date'),
-		// 		'cust_address' => $this->input->post('p_time'),
-		// 		'username' => $this->input->post('pack_caterer_id'),
-		// 		'password' => $this->input->post('customer_id'),
-		// 		'path_image' => $path,
-		// 		'picture' => $this->input->post('customer_lname'),
-		// 		'price' => "Customer"
-		// 	);
+				'cust_name' => $this->input->post('cust_name'),
+				'cust_lastname' => $this->input->post('cust_lastname'),
+				'cust_phonenum' => $this->input->post('cust_phonenum'),
+				'cust_address' => $this->input->post('cust_address'),
+				'username' => $this->input->post('username'),
+				'password' => $this->input->post('password'),
+				'path_image' => $image
+			);
 
-		// 	$this->CustomerModel->insert($add);
+			$this->CustomerModel->insert($add);
 
-		// }
+		}
 
 		public function pay()
 		{
@@ -178,6 +176,8 @@
 
 			$this->CustomerModel->update($data, $id);
 		}
+
+
 
 
 	}

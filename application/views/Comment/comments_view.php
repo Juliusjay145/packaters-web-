@@ -77,24 +77,28 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="" href="<?php echo base_url('CateringController/home')?>"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a href="<?php echo base_url('CateringController/home')?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('ServiceController/service')?>"><i class="fa fa-desktop"></i> Add Service</a>
+                        <a href="<?php echo base_url('ServiceController/service')?>" ><i class="fa fa-desktop"></i>Add Service</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i>Transaction <span class="badge badge-primary"></span></a>
+                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('CommentController/comment')?>" class="active-menu"><i class="fa fa-comments-o"></i>Feedback <span class="badge badge-primary"></span></a>
+                        <a href="<?php echo base_url('CateringController/transaction_completed')?>"><i class="fa fa-bar-chart-o"></i> Confirmed Transaction</a>
                     </li>
-
-
                     <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> My Service<span class="fa arrow"></span></a>
+                        <a href="<?php echo base_url('CateringController/transaction_reports')?>"><i class="fa fa-bar-chart-o"></i> Reports Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i> Category<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="<?php echo base_url('ServiceController/listservice')?>">List of Services</a>
+                                <a href="<?php echo base_url('ServiceController/listservice')?>" class="active-menu">List of Service</a>
                             </li>
                         </ul>
                     </li>
@@ -109,7 +113,7 @@
              <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            Add Service<small></small>
+                            Comment<small></small>
                         </h1>
                     </div>
                 </div>
@@ -127,7 +131,18 @@
                                     ?>
 
 
-                            <?php if($c['id'] == $s['pack_caterer_id']):?>
+                            <?php 
+
+                            if($c['id'] == $s['pack_caterer_id']):
+
+
+                            if($s['status'] == "Active"):
+
+
+                                ?>
+
+
+
         <div class="container">                        
            <div class="row">
               <div class="tab-content">
@@ -148,7 +163,7 @@
                               <p class="media-comment">
                                 <?php echo $s['comment']?>
                               </p>
-                              <a class="btn btn-danger text-uppercase" href="#" id="reply"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+                              <a class="btn btn-danger text-uppercase" href="<?php echo base_url('CommentController/delete')?>/<?php echo $s['pack_comment_id']?>" id="reply"><span class="glyphicon glyphicon-trash"></span> Delete</a>
                           </div>              
                         </div>  
                       </li>
@@ -157,6 +172,7 @@
            </div>    
            </div>
            <?php endif; ?>   
+           <?php endif; ?> 
            <?php endif; ?> 
            <?php endif; ?> 
            <?php endforeach; ?>   

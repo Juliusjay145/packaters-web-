@@ -26,7 +26,22 @@
 			$this->load->view('headerV2/footer_view');
 		}
 
+		public function delete()
+		{
+			$id = $this->uri->segment(3);
+            $data = array(
 
+                //'confirm' => 0,
+                'status' => 'Delete'
+
+                );
+            $this->CommentModel->delete($data, $id);
+            redirect(base_url('CommentController/comment')); 
+		}
+
+		 public function _displayAlert($cont){
+      		echo "<script>window.location='".base_url()."$cont';</script>";
+    	}
 
 
 
