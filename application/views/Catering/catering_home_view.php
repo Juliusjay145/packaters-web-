@@ -1,10 +1,8 @@
 <?php
-
   if(! $this->session->userdata('username'))
   {
     redirect(base_url('LandingPageController/index'));
   }
-
 ?>
 
 
@@ -30,14 +28,12 @@
                     
                  ?>
 
-               
-                <a class="navbar-brand" href="index.html">
-                    <b><?php echo $c['cat_name']; ?>
-                     <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 20px; height: 50px; width: 50px; margin-top:-70px; margin-bottom: -70px " alt="" class="img-fluid">
+                <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 10px; height: 50px; width: 50px; margin-top: -30px; margin-bottom: -70px " alt="" class="img-fluid">
 
+                <a href="index.html"><h2 style="margin-left: 300px; margin-top: -10px"><?php echo $c['cat_name']; ?></h2>
                 <?php endif; ?>
                 <?php endforeach; ?></a>
-            </a>    
+            
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
@@ -254,7 +250,7 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
-                    <li>
+                     <li>
                         <a href="<?php echo base_url('CateringController/home')?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
@@ -280,6 +276,8 @@
                             </li>
                         </ul>
                     </li>
+
+                    
                 </ul>
 
             </div>
@@ -295,15 +293,15 @@
                         <h1 class="page-header">
                             Dashboard <small>Summary of your App</small>
                         </h1>
-						<ol class="breadcrumb">
+                        <ol class="breadcrumb">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Library</a></li>
                             <li class="active">Data</li>
                         </ol>
                     </div>
                 </div>
-				
-				
+                
+                
                 <!-- /. ROW  -->
 
                 <div class="row">
@@ -314,7 +312,7 @@
                                 
                             </div>
                             <div class="panel-right pull-right">
-								<h3><?php echo $catering; ?></h3>
+                                <h3><?php echo $catering; ?></h3>
                                <strong> Service</strong>
                             </div>
                         </div>
@@ -323,10 +321,10 @@
                         <div class="panel panel-primary text-center no-boder bg-color-blue blue">
                               <div class="panel-left pull-left blue">
                                 <i class="fa fa-shopping-cart fa-5x"></i>
-								</div>
+                                </div>
                                 
                             <div class="panel-right pull-right">
-							<h3>0</h3>
+                            <h3>0</h3>
                                <strong> Completed Transaction</strong>
 
                             </div>
@@ -339,7 +337,7 @@
                                
                             </div>
                             <div class="panel-right pull-right">
-							 <h3>0</h3>
+                             <h3>0</h3>
                                <strong> Confirmed Request </strong>
 
                             </div>
@@ -352,7 +350,7 @@
                                 
                             </div>
                             <div class="panel-right pull-right">
-							<h3>0</h3>
+                            <h3>0</h3>
                              <strong>Canceled Transaction</strong>
 
                             </div>

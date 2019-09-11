@@ -174,12 +174,13 @@
                         <div> </div> 
 
                           <div> </div>
-                            <div> <h5 style="margin-top:-30px" class="card-title"><b><?php echo $s['service_name']?></b></h5></div>
+                            <div> <h3 style="margin-top:-30px" class="card-title"><b><?php echo $s['service_name']?></b></h3></div>
                           <div> </div>  
 
                         <div> </div>
-                            <div style="margin-top: -70px">  
-                                <span><p class="card-text"><?php echo $s['service_description']?></p></span> 
+                            <div style="margin-top: -30px">
+                            <label style="margin-left: -50%"><h5><b>Menu Description:</b></h5></label>  
+                                <span><p class="card-text" style="margin-top: -18px; margin-left: 10px"><i><?php echo $s['service_description']?></i></p></span> 
                             </div>
                         <div> </div>
 
@@ -188,7 +189,7 @@
                         <div> </div>
                         <div> </div>
                         
-                        <div class="footer">
+                        <div class="footer" style="margin-top: -50px">
                             <a href="<?php echo base_url('CategoryController/category')?>/<?php echo $s['id']?>"class="btn btn-primary">Add Menu</a>
                              <a href="<?php echo base_url('ServiceController/service_profile')?>/<?php echo $s['id']?>" class="btn btn-primary">Edit</a>
                              <br>

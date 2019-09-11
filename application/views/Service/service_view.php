@@ -35,20 +35,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <?php foreach($catering as $c): ?>
-                 
-                 <?php
-                    if($this->session->userdata('username') == $c['username']):
-                    
-                        $c['cat_name'];
-                        //$id = $pestcontrol['pestcontrol_id'];
-                 ?>
+                        <?php foreach($catering as $c): ?>
+                         
+                         <?php
+                            if($this->session->userdata('username') == $c['username']):
+                            
+                                $c['cat_name'];
+                                //$id = $pestcontrol['pestcontrol_id'];
+                         ?>
 
-                
-                <a class="navbar-brand" href="index.html"><b><?php echo $c['cat_name']; ?>
-                <?php endif ?>
-                <?php endforeach; ?>
-            </a>
+                        <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 10px; height: 50px; width: 50px; margin-top: -30px; margin-bottom: -70px " alt="" class="img-fluid">
+
+                        <a href="index.html"><h2 style="margin-left: 300px; margin-top: -10px"><?php echo $c['cat_name']; ?></h2>
+                        <?php endif; ?>
+                        <?php endforeach; ?></a>
+
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
