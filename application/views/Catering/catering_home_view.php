@@ -33,7 +33,7 @@
                
                 <a class="navbar-brand" href="index.html">
                     <b><?php echo $c['cat_name']; ?>
-                     <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 20px; height: 50px; width: 50px; margin-top: -135px; margin-bottom: -70px " alt="" class="img-fluid">
+                     <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 20px; height: 50px; width: 50px; margin-top:-70px; margin-bottom: -70px " alt="" class="img-fluid">
 
                 <?php endif; ?>
                 <?php endforeach; ?></a>

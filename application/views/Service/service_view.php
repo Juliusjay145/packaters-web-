@@ -19,6 +19,11 @@
     }
     .btn-glyphicon { padding:4px; margin-top: 4px; background:#ffffff; margin-right:4px; }
 .icon-btn { padding: 1px 15px 3px 2px; border-radius:50px;}
+
+.info:hover {
+  background: #2196F3;
+  color: white;
+}
 </style>
 
 <div id="wrapper">
@@ -148,13 +153,19 @@
                                             <label>Service Name</label>
                                             <input class="form-control" name="service_name" placeholder="Enter text">
                                         </div>
+                                        <!-- <div class="form-group" style="height: 40px; width: 100%; margin-top: 10px; margin-bottom: 20px">
+
+                                            <label for="username" class="textcolor" style="font-size: 15px">Catering Logo:</label><br>
+                                                <button class="btn info">
+                                                <input type="file" style="height: 40px; width: 100%; font-size: 15px" name="logo" class="form-control btn info">
+                                                Choose File
+                                                </button>
+                                        </div> -->
                                         <div class="form-group">
                                             <label>File input</label>
-                                                <input type="file" name="logo" class="form-control btn btn-success btn-lg btn3d"><br/> 
-                                                <p class="double" style="height: 30px" class="btn btn-success btn-lg btn3d">
-                                                    <h6 style="margin-top: -40px; margin-left: 10px; width: 200px; ">
-                                                        <b style="color: white; margin-top: 10px; height: 100px;">Choose file  <span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span></b></h6>
-                                                </p>
+
+                                            <input type="file" name="logo">
+                                            <input type="file" name="logo" class="form-control"><br/> <button class="btn info btn btn-primary">Choose file to upload</button>
                                         </div>
                                         <div class="form-group">
                                             <label>Service Description</label>

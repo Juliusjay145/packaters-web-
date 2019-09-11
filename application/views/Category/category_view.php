@@ -110,7 +110,9 @@
                                         </div>
                                         <div class="form-group">
                                             <label>File input</label>
-                                            <input type="file" name="menu_logo" class="form-control"><br/> Choose file to upload
+
+                                            <input type="file" name="logo">
+                                            <input type="file" name="logo" class="form-control"><br/> <button class="btn info btn btn-primary">Choose file to upload</button>
                                         </div>
                                         
                                         <div class="form-group">

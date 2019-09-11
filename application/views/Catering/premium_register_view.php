@@ -58,7 +58,7 @@
                             </div>
                             <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">
                                 <label for="password" class="textcolor" style="font-size: 15px">Password:</label><br>
-                                <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="password" class="form-control">
+                                <input type="password"  style="height: 40px; width: 100%; font-size: 15px" name="password" class="form-control">
                             </div>
 
 
@@ -69,7 +69,7 @@
 
                             <div class="mt-4">
                                 <div class="d-flex justify-content-center links textcolor" id="register-link" style="font-size: 15px">
-                                    Let me Login<a href="<?php echo base_url('LandingPageController/register')?>" class="textcolor">&nbsp;Click here</a>
+                                    Let me Login<a href="<?php echo base_url('CateringController/login_view')?>" class="textcolor">&nbsp;Click here</a>
                                 </div>
                             </div>
                         </form>
