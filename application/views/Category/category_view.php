@@ -7,7 +7,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><b>Pa</b>ckaters</a>
+               <?php foreach($catering as $c): ?>
+                 
+                 <?php
+                    if($this->session->userdata('username') == $c['username']):
+                    
+                        $c['cat_name'];
+                        //$id = $pestcontrol['pestcontrol_id'];
+                    
+                 ?>
+
+                <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 10px; height: 50px; width: 50px; margin-top: -30px; margin-bottom: -70px " alt="" class="img-fluid">
+
+                <a href="<?php echo base_url('CateringController/home')?>"><h2 style="margin-left: 300px; margin-top: -10px"><?php echo $c['cat_name']; ?></h2>
+                <?php endif; ?>
+                <?php endforeach; ?>
+                </a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -54,25 +69,31 @@
         <!--/. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
+                 <ul class="nav" id="main-menu">
 
                     <li>
                         <a href="<?php echo base_url('CateringController/home')?>"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="ui-elements.html"><i class="fa fa-desktop"></i> Service</a>
+                        <a href="<?php echo base_url('ServiceController/service')?>" ><i class="fa fa-desktop"></i>Add Service</a>
                     </li>
                     <li>
-                        <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Transaction</a>
+                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CateringController/transaction_completed')?>"><i class="fa fa-bar-chart-o"></i> Confirmed Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CateringController/transaction_reports')?>"><i class="fa fa-bar-chart-o"></i> Reports Transaction</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-sitemap"></i> Category<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#" class="active-menu">Add Menu</a>
-                            </li>
-                            <li>
-                                <a href="#">List of Menu</a>
+                                <a href="<?php echo base_url('ServiceController/listservice')?>" class="active-menu">List of Service</a>
                             </li>
                         </ul>
                     </li>
@@ -106,13 +127,11 @@
                     
                                         <div class="form-group">
                                             <label>Menu Name</label>
-                                            <input class="form-control" name="name" placeholder="Enter text">
+                                            <input class="form-control" name="name" placeholder="Enter text" autofocus>
                                         </div>
                                         <div class="form-group">
                                             <label>File input</label>
-
-                                            <input type="file" name="logo">
-                                            <input type="file" name="logo" class="form-control"><br/> <button class="btn info btn btn-primary">Choose file to upload</button>
+                                            <input type="file" name="menu_logo" class="form-control"><br/> <button class="btn info btn btn-primary">Choose file to upload</button>
                                         </div>
                                         
                                         <div class="form-group">

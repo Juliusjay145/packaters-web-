@@ -105,7 +105,7 @@
 
                 );
             $this->CategoryModel->delete($data, $id);
-            redirect(base_url('ServiceController/service'));
+            redirect(base_url('ServiceController/listservice'));
         }
 
 

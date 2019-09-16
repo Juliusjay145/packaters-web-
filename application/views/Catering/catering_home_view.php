@@ -30,7 +30,7 @@
 
                 <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 10px; height: 50px; width: 50px; margin-top: -30px; margin-bottom: -70px " alt="" class="img-fluid">
 
-                <a href="index.html"><h2 style="margin-left: 300px; margin-top: -10px"><?php echo $c['cat_name']; ?></h2>
+                <a href="<?php echo base_url('CateringController/home')?>"><h2 style="margin-left: 300px; margin-top: -10px"><?php echo $c['cat_name']; ?></h2>
                 <?php endif; ?>
                 <?php endforeach; ?></a>
             
@@ -257,16 +257,16 @@
                         <a href="<?php echo base_url('ServiceController/service')?>" ><i class="fa fa-desktop"></i>Add Service</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction</a>
+                        <a href="<?php echo base_url('CateringController/transaction')?>"><i class="fa fa-bar-chart-o"></i> Transaction <span class="badge" style="background-color: red"> <?php echo $customer; ?> </span></a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('CateringController/transaction_completed')?>"><i class="fa fa-bar-chart-o"></i> Confirmed Transaction</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('CateringController/transaction_reports')?>"><i class="fa fa-bar-chart-o"></i> Reports Transaction</a>
+                        <a href="<?php echo base_url('CateringController/transaction_reports')?>"><i class="fa fa-bar-chart-o"></i> Reports History</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback</a>
+                        <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback <span class="badge" style="background-color: red"><?php echo $comments; ?></span></a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-sitemap"></i> Category<span class="fa arrow"></span></a>

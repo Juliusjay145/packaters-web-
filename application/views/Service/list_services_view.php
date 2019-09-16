@@ -14,9 +14,10 @@
   grid-template-columns: auto auto auto;
   grid-gap: 10px;
    border-radius: 25px;
-  border: 2px solid #000000;
+  border: 1.1px solid #000000;
   background-color: #fefefe;
   padding: 10px;
+   box-shadow: 5px 10px #888888;
 }
 
 .grid-container > div {
@@ -42,13 +43,15 @@
                     
                         $c['cat_name'];
                         //$id = $pestcontrol['pestcontrol_id'];
+                    
                  ?>
 
-                
-                <a class="navbar-brand" href="index.html"><b><?php echo $c['cat_name']; ?>
-                <?php endif ?>
+                <img src="<?php echo base_url('../bootstrap/img/newlogopackaters.png')?>" style="margin-left: 10px; height: 50px; width: 50px; margin-top: -30px; margin-bottom: -70px " alt="" class="img-fluid">
+
+                <a href="<?php echo base_url('CateringController/home')?>"><h2 style="margin-left: 300px; margin-top: -10px"><?php echo $c['cat_name']; ?></h2>
+                <?php endif; ?>
                 <?php endforeach; ?>
-            </a>
+                </a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -110,7 +113,7 @@
                         <a href="<?php echo base_url('CateringController/transaction_completed')?>"><i class="fa fa-bar-chart-o"></i> Confirmed Transaction</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('CateringController/transaction_reports')?>"><i class="fa fa-bar-chart-o"></i> Reports Transaction</a>
+                        <a href="<?php echo base_url('CateringController/transaction_reports')?>"><i class="fa fa-bar-chart-o"></i> Reports History</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('CommentController/comment')?>"><i class="fa fa-comments-o"></i>Feedback</a>
@@ -134,7 +137,7 @@
              <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                            Add Service<small></small>
+                            List of Service<small></small>
                         </h1>
                     </div>
                 </div> 
@@ -155,10 +158,9 @@
                             <?php if($c['id'] == $s['pack_caterer_id']):?>
 <!-- Listview -->                                
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="row">
-            <div class="col-lg-6"><br/>
+<div class="column">
+            <div class="col-sm-6"><br>
                
                 <div class="box-part text-center">
                         
@@ -202,23 +204,22 @@
 
                     </div>
 
-<script>
+                </div>
+            </div>    
+</div>                     
+
+<!-- <script>
     function reload(){
         location.reload();
     }
-</script>
+</script> -->
 
 
-
-                        
-                </div>
-            </div>
             <?php endif; ?>   
             <?php endif; ?> 
             <?php endif; ?> 
             <?php endforeach; ?>   
-            <?php endforeach; ?>
-</div>                  
+            <?php endforeach; ?>             
 <!-- end of listview-->
             
      <!-- /. WRAPPER  -->

@@ -111,6 +111,13 @@
 			$this->load->view('header/footer_view');
 		}
 
+		public function notfound()
+		{
+			$this->load->view('header/header_view');
+			$this->load->view('LandingPage/notfound_view');
+			$this->load->view('header/footer_view');
+		}
+
 		// public function profile()
 		// {
 		// 	$this->load->view('header/header_view');
@@ -181,7 +188,7 @@
 
 
 			$image = $this->input->post('logo');
-        	$path = "http://10.0.2.2/packaters/upload/". $image;
+        	$path = "http://192.168.43.19/packaters/upload/". $image;
 
         	$permit = $this->input->post('permit');
         	$path2 = "http://192.168.43.19/packaters/upload/". $permit;
@@ -219,7 +226,7 @@
 
 
 			$image = $this->input->post('logo');
-        	$path = "http://10.0.2.2/packaters/upload/". $image;
+        	$path = "http://192.168.43.19/packaters/upload/". $image;
 
         	$permit = $this->input->post('permit');
         	$path2 = "http://192.168.43.19/packaters/upload/". $permit;
@@ -317,7 +324,7 @@
 	                }
 
 	                else{
-	                    $this->_displayAlert2('Please contact the admin to update your status','Clients/valid');
+	                    $this->_displayAlert('CateringController/notfound');
 	                } 
 	        }
 	    }
@@ -344,6 +351,7 @@
 	            );
 
 	        $this->CateringModel->update($add);
+	        redirect(base_url('CateringController/home'));
 	        //$this->_displayAlert('Account has been updated','CateringController/home');
 	    }
 

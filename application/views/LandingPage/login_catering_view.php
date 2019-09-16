@@ -44,7 +44,7 @@
                             </div>
                             <div class="mt-4">
                                 <div class="d-flex justify-content-center links textcolor" id="register-link" style="font-size: 15px">
-                                    Don't have an account? <a href="<?php echo base_url('LandingPageController/register')?>" class="textcolor">&nbsp;Register here</a>
+                                    Don't have an account? <a href="<?php echo base_url('CateringController/subscription')?>" class="textcolor">&nbsp;Register here</a>
                                 </div>
                             </div>
                         </form>

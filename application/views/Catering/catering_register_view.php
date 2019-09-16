@@ -29,7 +29,7 @@
                             <h3 class="text-center textcolor">Diamond Catering Provider Registration</h3>
 
                             <div class="form-group" style="height: 40px; width: 100%;">
-                                <label for="username" class="textcolor" style="font-size: 15px">First Name:</label><br>
+                                <label for="username" class="textcolor" style="font-size: 15px">Catering Name:</label><br>
                                 <input type="text"  style="height: 40px; width: 100%; font-size: 15px" name="name" class="form-control" autofocus>
                             </div>
                             <div class="form-group" style="height: 40px; width: 100%; margin-top: 50px">

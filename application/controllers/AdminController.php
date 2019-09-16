@@ -98,7 +98,8 @@
 					 // if($result[0]['status']=='Active'){
 	                    
 	                    if($result[0]['user_type']=='admin'){
-	                    $this->_displayAlert('Login Successfully','AdminController/home');
+	                    //$this->_displayAlert('Login Successfully','AdminController/home');
+	                    redirect(base_url('AdminController/home'));
 	                    
 	                    }
 
