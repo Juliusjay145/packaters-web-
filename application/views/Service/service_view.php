@@ -180,8 +180,8 @@
                                     </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
-                                <div class="col-lg-6" style="margin-left: -100px">
-                                    <img src="<?php echo base_url('../bootstrapV3/img/icon.png')?>" width="150%"height="150%" >
+                                <div class="col-lg-6" style="margin-left: -40px">
+                                    <img src="<?php echo base_url('../bootstrap/img/icon.png')?>" width="120%"height="120%" >
                                 </div>
 
                                 <div class="row">

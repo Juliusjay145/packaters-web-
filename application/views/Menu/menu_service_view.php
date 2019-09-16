@@ -9,7 +9,7 @@
 <style>
     .grid-container {
   display: grid;
-  height: 400px;
+  height: 600px;
   width: 400px;
   margin-left: 100px;
   align-content: center;
@@ -29,6 +29,31 @@
 }
 p.outset {border-style: outset;}
 
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  border: 1px solid red;
+  padding: 15px;
+}
+
+.menu {
+  width: 25%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.main {
+  width: 75%;
+  float: left;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 25px;
+
+}
     
 </style>
 
@@ -166,7 +191,7 @@ p.outset {border-style: outset;}
                         
                        
                         
-                    <div class="grid-container">
+                    <div class="grid-container main">
 
                         <div> </div>
                             <div style="margin-top: 50px; margin-left: 10px">
@@ -181,8 +206,10 @@ p.outset {border-style: outset;}
 
                         <div> </div>
                             <div style="margin-top: -30px">
-                            <label style="margin-left: -50%"><h5><b>Menu Description:</b></h5></label>  
-                                <span><p class="card-text" style="margin-top: -18px; margin-left: -60px"><i><?php echo $m['menu_description']?></i></p></span> 
+                            <label style="margin-right: 50%; margin-bottom: -100px"><h5><b>Menu Description:</b></h5></label>  
+                                <span>
+                                    <p class="card-text main" style="margin-top: 28px; margin-left: 50px;"><i><?php echo $m['menu_description']?></i></p>
+                                </span> 
                             </div>
                         <div> </div>
 
