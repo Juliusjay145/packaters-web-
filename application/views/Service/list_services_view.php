@@ -219,12 +219,12 @@
                         <div> </div>
                         
                         <div class="footer" style="margin-top: -100px">
-                            <a href="<?php echo base_url('CategoryController/category')?>/<?php echo $s['id']?>"class="btn btn-primary">Add Menu</a>
-                             <a href="<?php echo base_url('ServiceController/service_profile')?>/<?php echo $s['id']?>" class="btn btn-primary">Edit</a>
+                            <a href="<?php echo base_url('CategoryController/category')?>/<?php echo $s['id']?>"class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Add Menu</a>
+                             <a href="<?php echo base_url('ServiceController/service_profile')?>/<?php echo $s['id']?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
                              <br>
                              <br>
-                            <a href="<?php echo base_url('CategoryController/menu')?>/<?php echo $s['id']?>" class="btn btn-success">View menu</a>
-                            <a onclick="reload()" href="<?php echo base_url('ServiceController/delete_service')?>/<?php echo $s['id']?>" class="btn btn-danger">Delete</a>
+                            <a href="<?php echo base_url('CategoryController/menu')?>/<?php echo $s['id']?>" class="btn btn-success"><i class="glyphicon glyphicon-eye-open"></i> View menu</a>
+                            <a onclick="reload()" href="<?php echo base_url('ServiceController/delete_service')?>/<?php echo $s['id']?>" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Delete</a>
 
                         </div>
 

@@ -166,7 +166,7 @@
                                             <label>File input</label>
 
                                             <input type="file" name="logo">
-                                            <input type="file" name="logo" class="form-control"><br/> <button class="btn info btn btn-primary">Choose file to upload</button>
+                                            <input type="file" name="logo" class="form-control"><br/> <button class="btn info btn btn-primary"><i class="glyphicon glyphicon-paperclip"></i> Choose file to upload</button>
                                         </div>
                                         <div class="form-group">
                                             <label>Service Description</label>
@@ -176,7 +176,7 @@
                                             <label>Service Price</label>
                                             <input type="number" class="form-control" name="service_price">
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Add Service</button>
+                                        <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Add Service</button>
                                     </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->

@@ -70,6 +70,7 @@
 		public function fetch_service_menu()
 		{
 			$id = $this->uri->segment(4);
+			$this->db->where("status", "Active");
 			$data = $this->CategoryModel->get_menu($id);
 			echo json_encode(array('pack_service_menu' => $data ));
 		}

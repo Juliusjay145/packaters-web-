@@ -52,6 +52,8 @@
             $image = $this->input->post('logo');
             $path = "http://192.168.43.19/packaters/upload/". $image;
 
+
+
             foreach($data as $d):
 					if($d['username'] == $this->session->userdata('username'))
 					{
@@ -68,7 +70,13 @@
                     endforeach;			
                 endforeach;
 
-                $add = array(
+                if($txtservice == "" && $txtdetails == "" && $txtprice == "")
+                {
+                    redirect(base_url('ServiceController/service'));
+                }
+                else
+                {
+                    $add = array(
 
                     'service_name' => $txtservice,
                     'service_description' => $txtdetails,
@@ -82,6 +90,12 @@
 
                           $this->ServiceModel->insert($add);
                           redirect(base_url('ServiceController/listservice'));
+                }
+
+                    
+                
+
+                
         }
 
 

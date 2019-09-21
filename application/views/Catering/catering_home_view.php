@@ -324,9 +324,8 @@
                                 </div>
                                 
                             <div class="panel-right pull-right">
-                            <h3>0</h3>
+                            <h3><?php echo $completed; ?></h3>
                                <strong> Completed Transaction</strong>
-
                             </div>
                         </div>
                     </div>
@@ -337,7 +336,7 @@
                                
                             </div>
                             <div class="panel-right pull-right">
-                             <h3>0</h3>
+                             <h3><?php echo $confirm; ?></h3>
                                <strong> Confirmed Request </strong>
 
                             </div>

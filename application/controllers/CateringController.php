@@ -27,6 +27,8 @@
 			$data['catering'] = $this->ServiceModel->count_catering_service();
 			$data['customer'] = $this->BookingModel->count_booking();
 			$data['comments'] = $this->CommentModel->count_comment();
+			$data['completed'] = $this->BookingModel->count_completed2();
+			$data['confirm'] = $this->BookingModel->count_confirm();
 			$d=array('notification' => 0);
         	$this->BookingModel->updatenotification($d);
         	$s=array('notification' => 0);
@@ -320,12 +322,15 @@
 	                    $this->_displayAlert('CateringController/home');
 	                    
 	                    }
-
 	                }
 
 	                else{
-	                    $this->_displayAlert('CateringController/notfound');
+	                    redirect(base_url('CateringController/login_view'));
 	                } 
+	        }
+
+	        else{
+	        	$this->_displayAlert2('Username or Password Incorrect','CateringController/login_view');
 	        }
 	    }
 
@@ -365,9 +370,9 @@
       		echo "<script>window.location='".base_url()."$cont';</script>";
     	}
 
-    	public function _displayAlert2($cont){
-      		echo "<script>alert('$message');window.location='".base_url()."$cont';</script>";
-    	}            
+    	public function _displayAlert2($message,$cont){
+       	 echo "<script>alert('$message');window.location='".base_url()."$cont';</script>";
+       	 }           
 
 	}
 

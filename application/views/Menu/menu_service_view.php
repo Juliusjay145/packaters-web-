@@ -219,8 +219,8 @@ p.outset {border-style: outset;}
                         <div> </div>
                         
                         <div class="footer" style="margin-top: -50px">
-                            <a href="<?php echo base_url('CategoryController/menu_profile')?>/<?php echo $m['id']?>" class="btn btn-primary">Edit</a>
-                            <a onclick="reload()" href="<?php echo base_url('CategoryController/delete')?>/<?php echo $m['id']?>" class="btn btn-danger">Delete</a>
+                            <a href="<?php echo base_url('CategoryController/menu_profile')?>/<?php echo $m['id']?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+                            <a onclick="reload()" href="<?php echo base_url('CategoryController/delete')?>/<?php echo $m['id']?>" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Delete</a>
                         </div>
 
 

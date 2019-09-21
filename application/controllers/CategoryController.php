@@ -63,20 +63,30 @@
                 }
             endforeach;
 
-            $add = array(
+            if($txtservice == "" && $txtdetails == "")
+            {
+                echo "Invalid";
+            }
 
-                'menu_name' => $txtservice,
-                'menu_description' => $txtdetails,
-                'logo' => $image,
-                'path_image' => $path,
-                'pack_caterer_id' => $id,
-                'service_id' => $service_id
+            else
+            {
+                $add = array(
+
+                    'menu_name' => $txtservice,
+                    'menu_description' => $txtdetails,
+                    'logo' => $image,
+                    'path_image' => $path,
+                    'pack_caterer_id' => $id,
+                    'service_id' => $service_id
 
                 );
 
 
-                      $this->CategoryModel->insert($add);
-                      redirect(base_url('ServiceController/listservice'));
+                $this->CategoryModel->insert($add);
+                redirect(base_url('ServiceController/listservice'));
+            }
+
+            
         }
 
 

@@ -33,6 +33,18 @@
 			return $query->row()->customer;
 		}
 
+		public function count_completed2()
+		{
+			$query = $this->db->query('SELECT COUNT(pack_caterer_id) as customer FROM pack_transaction WHERE status = "Completed"');
+			return $query->row()->customer;
+		}
+
+		public function count_confirm()
+		{
+			$query = $this->db->query('SELECT COUNT(customer_id) as customer FROM pack_transaction WHERE status = "Confirm"');
+			return $query->row()->customer;
+		}
+
 		public function count_completed()
 		{
 			$query = $this->db->query('SELECT COUNT(pack_caterer_id) as catering FROM pack_transaction');
@@ -56,19 +68,7 @@
 
 
 
-
-
-
 	}
-
-
-
-
-
-
-
-
-
 
 
 
